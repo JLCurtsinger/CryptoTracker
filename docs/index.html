@@ -123,28 +123,33 @@
     }
   
     async function loadBestBet() {
-      const data = await fetchData('./output.json');
-      if (!data || !data.best_bet) {
-        document.getElementById('best-bet').innerHTML = "<p>No profitable coin found.</p>";
-        return;
-      }
-  
-      const bestBet = data.best_bet;
-      const suggestedBuyIn = 100; // Example buy-in amount
-      const suggestedHoldTime = data.suggested_holding_time || "1-2 weeks";
-      const projectedProfit = data.projected_profit_per_100 || 0;
-  
-      const html = `<h2>Your Best Bet</h2>
-                    <p>The coin with the highest chance of profitability is:</p>
-                    <p><strong>${bestBet.name} (${bestBet.symbol})</strong></p>
-                    <p>Price: $${bestBet.price.toFixed(2)}</p>
-                    <p>Suggested Buy-In: $${suggestedBuyIn}</p>
-                    <p>Suggested Holding Time: ${suggestedHoldTime}</p>`;
-      
-      const profitText = `Projected profit per $100: $${projectedProfit.toFixed(2)}`;
-      document.getElementById('profit').innerText = profitText;
-  
-      document.getElementById('best-bet').innerHTML = html;
+        const data = await fetchData('./output.json');
+        if (!data || !data.best_bet) {
+            document.getElementById('best-bet').innerHTML = "<p>No profitable coin found.</p>";
+            return;
+        }
+    
+        const bestBet = data.best_bet;
+        const suggestedBuyIn = 100; // Example buy-in amount
+        let suggestedHoldTime = data.suggested_holding_time || "N/A";
+    
+        // Determine the unit
+        const holdingTimeUnit = suggestedHoldTime > 7 ? "weeks" : "days";
+        suggestedHoldTime = `${suggestedHoldTime} ${holdingTimeUnit}`;
+    
+        const projectedProfit = data.projected_profit_per_100 || 0;
+    
+        const html = `<h2>Your Best Bet</h2>
+                      <p>The coin with the highest chance of profitability is:</p>
+                      <p><strong>${bestBet.name} (${bestBet.symbol})</strong></p>
+                      <p>Price: $${bestBet.price.toFixed(2)}</p>
+                      <p>Suggested Buy-In: $${suggestedBuyIn}</p>
+                      <p>Suggested Holding Time: ${suggestedHoldTime}</p>`;
+        
+        const profitText = `Projected profit per $100: $${projectedProfit.toFixed(2)}`;
+        document.getElementById('profit').innerText = profitText;
+    
+        document.getElementById('best-bet').innerHTML = html;
     }
   
     loadSignals();
