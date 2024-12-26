@@ -3,7 +3,7 @@ name: Publish Crypto Analysis
 on:
   # Runs on a daily schedule at 6 AM UTC, plus manual triggers
   schedule:
-    - cron: '0 6 * * *'
+    - cron: '*/5 * * * *'  # Runs every 5 minutes
   workflow_dispatch:
 
 jobs:
