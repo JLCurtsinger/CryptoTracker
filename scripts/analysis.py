@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timezone
 import json
 import requests
 import numpy as np
@@ -239,7 +239,8 @@ if __name__ == "__main__":
         # best_signal = max(buy_signals, key=lambda x: max(x['buy'], x['sell']))
          # Identify the coin with the highest buy chance
         best_signal = max(buy_signals, key=lambda x: x['buy']) if buy_signals else None
-        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        # Get current UTC time
+        timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
         decision = "BUY" if best_signal['buy'] > best_signal['sell'] else "SELL"
         certainty = max(best_signal['buy'], best_signal['sell'])
         print(f"\nBest Decision: {decision} {certainty}% for {best_signal['symbol']} "
