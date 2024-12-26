@@ -21,7 +21,7 @@ body {
 }
 
 #best-bet h2 {
-  color: #007bff;
+  color: #3b05ed;
 }
 
 /* Title Styling */
@@ -34,7 +34,7 @@ h1 {
 
 h2 {
   text-align: center;
-  color: #007bff; /* Blue to differentiate headings */
+  color: #3b05ed; /* Blue to differentiate headings */
   font-size: 28px;
   margin-bottom: 15px;
 }
@@ -110,6 +110,6 @@ tr:hover {
 }
 
 #top-10 th {
-  background-color: #007bff;
+  background-color: #3b05ed;
   color: white;
 }
