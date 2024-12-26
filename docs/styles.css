@@ -139,3 +139,9 @@ tr:hover {
   background-color: #3b05ed;
   color: white;
 }
+
+#profit, #holding-time {
+    text-align: center;
+    margin: 20px auto;
+    font-weight: bold;
+}
