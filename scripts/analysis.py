@@ -67,11 +67,18 @@ def fetch_crypto_metadata():
         return {}
 
     data = response.json()
-    if 'data' not in data or not data['data']:
-        print("Error: No metadata found in API response.")
+    if 'data' not in data:
+        print("Error: 'data' key not found in API response")
         return {}
 
-    return {item['symbol'].upper(): item['id'] for item in data['data']}
+    # Create a mapping of symbol to CoinMarketCap ID and icon URL
+    metadata = {}
+    for item in data['data']:
+        metadata[item['symbol'].upper()] = {
+            "id": item['id'],
+            "icon_url": f"https://s2.coinmarketcap.com/static/img/coins/64x64/{item['id']}.png"
+        }
+    return metadata
 
 # =============================================
 # FETCH TOP 10 CRYPTOS BY MARKET CAP
