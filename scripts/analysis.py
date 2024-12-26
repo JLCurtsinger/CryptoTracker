@@ -170,6 +170,7 @@ def analyze_data(data, coinbase_symbols):
                 'price': price,
                 'rsi': rsi,
                 'volume': volume_24h,
+                'percent_change_24h': percent_change_24h,
                 'buy': buy_certainty,
                 'sell': sell_certainty
             })
@@ -184,13 +185,18 @@ def calculate_projected_profit(best_signal, holding_time_days):
     return round(projected_profit, 2)
 
 def calculate_holding_time(best_signal):
-    percent_change_24h = abs(best_signal['percent_change_24h'])
-    if percent_change_24h < 2:
-        return 14
-    elif percent_change_24h < 5:
-        return 7
-    else:
-        return 2
+    """
+    Suggest a holding time based on historical volatility and price trends.
+    """
+    percent_change_24h = abs(best_signal.get('percent_change_24h', 0))  # Default to 0 if missing
+
+    # Estimate holding time inversely proportional to volatility
+    if percent_change_24h < 2:  # Low volatility
+        return 14  # Hold for 2 weeks
+    elif percent_change_24h < 5:  # Moderate volatility
+        return 7  # Hold for 1 week
+    else:  # High volatility
+        return 2  # Hold for 2 days
 
 # =============================================
 # MAIN SCRIPT
@@ -249,4 +255,5 @@ if __name__ == "__main__":
     with open("scripts/output.json", "w") as f:
         json.dump(results, f, indent=2)
 
+    print("Best Signal:", best_signal)
     print("\nSuccessfully wrote buy signals to scripts/output.json")
