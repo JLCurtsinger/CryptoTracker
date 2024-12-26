@@ -66,20 +66,20 @@
   
       let html = "<table><thead><tr><th>Coin</th><th>Price</th><th>RSI</th><th>Volume</th><th>Buy (%)</th><th>Sell (%)</th></tr></thead><tbody>";
       for (let signal of buySignals) {
-        const graphUrl = signal.coin_id
+      const graphUrl = signal.coin_id
           ? `https://s3.coinmarketcap.com/generated/sparklines/web/1d/usd/${signal.coin_id}.png`
           : null;
-  
-        html += `<tr>
+      
+      html += `<tr>
           <td>${signal.symbol}</td>
           <td>$${signal.price.toFixed(2)}</td>
           <td>${signal.rsi.toFixed(2)}</td>
           <td>${signal.volume.toFixed(2)}<br>
-            ${graphUrl ? `<img src="${graphUrl}" alt="${signal.symbol} chart" style="width: 100px; height: 30px;">` : 'N/A'}
+              ${graphUrl ? `<img src="${graphUrl}" alt="${signal.symbol} 1-day chart" style="width: 100px; height: 30px; filter: hue-rotate(180deg); opacity: 0.9; border: 2px solid black;">` : 'N/A'}
           </td>
           <td>${signal.buy.toFixed(2)}</td>
           <td>${signal.sell.toFixed(2)}</td>
-        </tr>`;
+      </tr>`;
       }
       html += "</tbody></table>";
       document.getElementById('signals').innerHTML = html;
