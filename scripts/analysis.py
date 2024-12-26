@@ -1,3 +1,4 @@
+from datetime import datetime
 import json
 import requests
 import os
@@ -55,6 +56,39 @@ def fetch_crypto_data():
         return None
 
     return data['data']
+
+# =============================================
+# FETCH TOP 10 CRYPTOS BY MARKET CAP
+# =============================================
+def fetch_top_10_cryptos():
+    headers = {'X-CMC_PRO_API_KEY': API_KEY}
+    params = {'start': 1, 'limit': 10, 'convert': 'USD'}
+    response = requests.get(BASE_URL, headers=headers, params=params)
+
+    if response.status_code != 200:
+        print(f"Error: Received status code {response.status_code}")
+        print(response.text)
+        return []
+
+    data = response.json()
+    if 'data' not in data:
+        print("Error: 'data' key not found in API response")
+        print(data)
+        return []
+
+    top_10_cryptos = [
+        {
+            'rank': idx + 1,
+            'name': coin['name'],
+            'symbol': coin['symbol'],
+            'market_cap': coin['quote']['USD']['market_cap'],
+            'price': coin['quote']['USD']['price'],
+            'volume': coin['quote']['USD']['volume_24h']
+        }
+        for idx, coin in enumerate(data['data'])
+    ]
+
+    return top_10_cryptos
 
 # =============================================
 # CALCULATE RSI (SIMPLIFIED)
@@ -183,6 +217,9 @@ if __name__ == "__main__":
         print("Failed to fetch crypto data. Exiting.")
         exit(1)
 
+    print("Fetching top 10 cryptos by market cap...")
+    top_10_cryptos = fetch_top_10_cryptos()
+
     print("Analyzing data (only for Coinbase-supported coins)...")
     buy_signals = analyze_data(crypto_data, coinbase_symbols)
 
@@ -200,7 +237,10 @@ if __name__ == "__main__":
         for signal in buy_signals:
             print(f"{signal['symbol']:<10} {signal['price']:<10.2f} {signal['buy']:<10.2f} {signal['sell']:<10.2f}")
 
-        best_signal = max(buy_signals, key=lambda x: max(x['buy'], x['sell']))
+        # best_signal = max(buy_signals, key=lambda x: max(x['buy'], x['sell']))
+         # Identify the coin with the highest buy chance
+        best_signal = max(buy_signals, key=lambda x: x['buy']) if buy_signals else None
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         decision = "BUY" if best_signal['buy'] > best_signal['sell'] else "SELL"
         certainty = max(best_signal['buy'], best_signal['sell'])
         print(f"\nBest Decision: {decision} {certainty}% for {best_signal['symbol']} "
@@ -210,8 +250,12 @@ if __name__ == "__main__":
 
     # SAVE RESULTS TO A JSON FILE
     # -------------------------------------------------
+    # JSON Output
     results = {
         "buy_signals": buy_signals
+        "top_10_cryptos": top_10_cryptos,
+        "best_bet": best_signal,
+        "timestamp": timestamp
     }
     # This creates/overwrites 'scripts/output.json' with the final signals
     with open("scripts/output.json", "w") as f:
