@@ -2,12 +2,27 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>Coinbase-Only Crypto Analysis</title>
+  <title>Crypto Tracker</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <h1>Crypto Signals</h1>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About This Website</h2>
+    <p>
+      This website provides real-time cryptocurrency analysis tailored specifically for assets tradable on Coinbase. Using advanced data processing, it fetches live crypto data from CoinMarketCap and filters it based on Coinbase’s available trading pairs. For each cryptocurrency, key metrics are calculated, including the Relative Strength Index (RSI) to identify overbought or oversold conditions, and Buy/Sell Certainty Scores, which are based on price changes, trading volume, and RSI values. The results are dynamically displayed in an interactive and visually appealing table, showing important details like price, RSI, volume, and the buy/sell confidence levels.
+    </p>
+    <p>
+      Automated backend processing ensures the data stays up to date, with GitHub Actions running the analysis script and updating the information seamlessly. This makes the website an easy-to-use tool for traders and investors looking to make informed decisions in the fast-moving crypto market.
+    </p>
+  </section>
+
+  <!-- Signals Section -->
   <div id="signals"></div>
+
+  <!-- Script Section -->
   <script>
     async function loadSignals() {
       const response = await fetch('./output.json');
@@ -27,7 +42,7 @@
       for (let signal of buySignals) {
         html += `<tr>
           <td>${signal.symbol}</td>
-          <td>$${signal.price.toFixed(2)}</td> <!-- Add $ before the price -->
+          <td>$${signal.price.toFixed(2)}</td>
           <td>${signal.rsi.toFixed(2)}</td>
           <td>${signal.volume.toFixed(2)}</td>
           <td>${signal.buy.toFixed(2)}</td>
