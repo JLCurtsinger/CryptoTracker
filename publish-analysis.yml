@@ -1,0 +1,48 @@
+name: Publish Crypto Analysis
+
+on:
+  # You can do a daily schedule, or run manually, or on pushes
+  schedule:
+    - cron: '0 6 * * *'   # Every day at 6:00 UTC
+  # manual trigger
+  workflow_dispatch:
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run analysis script
+        env:
+          COINMARKETCAP_API_KEY: ${{ secrets.COINMARKETCAP_API_KEY }}
+        run: |
+          python scripts/analysis.py
+
+      - name: Copy output to docs (or something you host on GH Pages)
+        run: |
+          # For example, if your script writes "analysis.json" or "analysis.html" 
+          # in the scripts/ folder, move it to "docs/" which is used by GH Pages
+          cp scripts/output.json docs/output.json
+          # Or if you generate an HTML, cp scripts/output.html docs/index.html
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add docs/
+          git commit -m "Update analysis [ci skip]" || echo "No changes to commit"
+
+      - name: Push changes
+        run: |
+          git push origin HEAD:${{ github.ref }}
