@@ -54,7 +54,7 @@
     }
   
     async function loadSignals() {
-      const data = await fetchData('./scripts/output.json');
+      const data = await fetchData('./output.json');
       if (!data || !data.buy_signals || data.buy_signals.length === 0) {
         document.getElementById('signals').innerHTML = "<p>No buy signals found.</p>";
         return;
@@ -86,7 +86,7 @@
     }
   
     async function loadTop10() {
-      const data = await fetchData('./scripts/output.json');
+      const data = await fetchData('./output.json');
       if (!data || !data.top_10_cryptos || data.top_10_cryptos.length === 0) {
         document.getElementById('top-10').innerHTML = "<p>No data available.</p>";
         return;
@@ -123,7 +123,7 @@
     }
   
     async function loadBestBet() {
-      const data = await fetchData('./scripts/output.json');
+      const data = await fetchData('./output.json');
       if (!data || !data.best_bet) {
         document.getElementById('best-bet').innerHTML = "<p>No profitable coin found.</p>";
         return;
