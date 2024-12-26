@@ -27,7 +27,7 @@
       for (let signal of buySignals) {
         html += `<tr>
           <td>${signal.symbol}</td>
-          <td>${signal.price.toFixed(2)}</td>
+          <td>$${signal.price.toFixed(2)}</td> <!-- Add $ before the price -->
           <td>${signal.rsi.toFixed(2)}</td>
           <td>${signal.volume.toFixed(2)}</td>
           <td>${signal.buy.toFixed(2)}</td>
