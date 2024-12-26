@@ -25,12 +25,16 @@
   
   <!-- Best Bet Section -->
   <section id="best-bet"></section>
+
+  <div id="profit"></div>
   
     <!-- Signals Table -->
   <div id="signals"></div>
 
   <!-- Top 10 Cryptos Table -->
   <section id="top-10"></section>
+
+  <div id="timestamp"></div>
 
   <!-- Script Section -->
   <script>
@@ -135,11 +139,20 @@
                     <p>Price: $${bestBet.price.toFixed(2)}</p>
                     <p>Suggested Buy-In: $${suggestedBuyIn}</p>
                     <p>Suggested Holding Time: ${suggestedHoldTime}</p>`;
+      
+      const profitText = `Projected profit per $100: $${data.projected_profit_per_100.toFixed(2)}`;
+      document.getElementById('profit').innerText = profitText;
     
       document.getElementById('best-bet').innerHTML = html;
     }
     
     loadBestBet();
+
+    const timestamp = new Date(data.timestamp); // Assume timestamp from API is UTC
+    const localTimestamp = timestamp.toLocaleString('en-US', { timeZoneName: 'short' });
+    
+    const timestampText = `Data last updated: ${localTimestamp}`;
+    document.getElementById('timestamp').innerText = timestampText;
   </script>
 </body>
 </html>
