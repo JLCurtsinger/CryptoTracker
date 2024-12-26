@@ -27,6 +27,8 @@
   <section id="best-bet"></section>
 
   <div id="profit"></div>
+
+  <div id="holding-time"></div>
   
     <!-- Signals Table -->
   <div id="signals"></div>
@@ -45,6 +47,8 @@
         return;
       }
       const data = await response.json();
+      const suggestedHoldTime = `${data.suggested_holding_time} days`; // Retrieve from JSON
+      document.getElementById('holding-time').innerText = `Suggested Holding Time: ${suggestedHoldTime}`;
       const buySignals = data.buy_signals || [];
 
       if (buySignals.length === 0) {
