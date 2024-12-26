@@ -55,6 +55,26 @@
         document.getElementById('signals').innerText = "No buy signals found.";
         return;
       }
+
+      if (data.best_bet) {
+        const bestBet = data.best_bet;
+        const projectedProfit = data.projected_profit_per_100 || 0; // Fallback to 0 if undefined
+        const suggestedHoldTime = data.suggested_holding_time || "N/A";
+      
+        // Populate best-bet section
+        document.getElementById('best-bet').innerHTML = `
+          <h2>Best Bet</h2>
+          <p>The cryptocurrency with the highest chance of profitability is <strong>${bestBet.name} (${bestBet.symbol})</strong>.</p>
+          <p>Suggested Minimum Buy-in: $100</p>
+          <p>Suggested Holding Time: ${suggestedHoldTime} days</p>
+        `;
+      
+        // Populate profit section
+        document.getElementById('profit').innerHTML = `
+          <h2>Projected Profit</h2>
+          <p>If you invest $100 in <strong>${bestBet.symbol}</strong> and hold it for ${suggestedHoldTime} days, your projected profit is approximately <strong>$${projectedProfit.toFixed(2)}</strong>.</p>
+        `;
+      }
           
       const timestamp = new Date(data.timestamp); // Assume timestamp from API is UTC
       const localTimestamp = timestamp.toLocaleString('en-US', { timeZoneName: 'short' });
@@ -64,11 +84,12 @@
 
       let html = "<table border='1'><thead><tr><th>Coin</th><th>Price</th><th>RSI</th><th>Volume</th><th>Buy (%)</th><th>Sell (%)</th></tr></thead><tbody>";
       for (let signal of buySignals) {
+        const graphUrl = `https://s3.coinmarketcap.com/generated/sparklines/web/1d/usd/${signal.symbol.toLowerCase()}.png`;
         html += `<tr>
           <td>${signal.symbol}</td>
           <td>$${signal.price.toFixed(2)}</td>
           <td>${signal.rsi.toFixed(2)}</td>
-          <td>${signal.volume.toFixed(2)}</td>
+          <td>${signal.volume.toFixed(2)}<br><img src="${graphUrl}" alt="${signal.symbol} 1-day chart" style="width: 100px; height: 30px;"></td>
           <td>${signal.buy.toFixed(2)}</td>
           <td>${signal.sell.toFixed(2)}</td>
         </tr>`;
