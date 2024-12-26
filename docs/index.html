@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Coinbase-Only Crypto Analysis</title>
+</head>
+<body>
+  <h1>Crypto Signals</h1>
+  <div id="signals"></div>
+  <script>
+    async function loadSignals() {
+      const response = await fetch('./output.json');
+      if (!response.ok) {
+        document.getElementById('signals').innerText = "Failed to load signals.";
+        return;
+      }
+      const data = await response.json();
+      const buySignals = data.buy_signals || [];
+
+      if (buySignals.length === 0) {
+        document.getElementById('signals').innerText = "No buy signals found.";
+        return;
+      }
+
+      let html = "<table border='1'><thead><tr><th>Coin</th><th>Price</th><th>RSI</th><th>Volume</th><th>Buy (%)</th><th>Sell (%)</th></tr></thead><tbody>";
+      for (let signal of buySignals) {
+        html += `<tr>
+          <td>${signal.symbol}</td>
+          <td>${signal.price.toFixed(2)}</td>
+          <td>${signal.rsi.toFixed(2)}</td>
+          <td>${signal.volume.toFixed(2)}</td>
+          <td>${signal.buy.toFixed(2)}</td>
+          <td>${signal.sell.toFixed(2)}</td>
+        </tr>`;
+      }
+      html += "</tbody></table>";
+      document.getElementById('signals').innerHTML = html;
+    }
+
+    loadSignals();
+  </script>
+</body>
+</html>
