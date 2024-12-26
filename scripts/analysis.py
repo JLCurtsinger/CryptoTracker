@@ -33,7 +33,6 @@ def fetch_coinbase_symbols():
         print(f"Exception while fetching Coinbase symbols: {e}")
         return set()
 
-    # Extract base_currency from each product (e.g., 'BTC' in 'BTC-USD')
     coinbase_symbols = {item['base_currency'] for item in products}
     return coinbase_symbols
 
@@ -68,11 +67,10 @@ def fetch_crypto_metadata():
         return {}
 
     data = response.json()
-    if 'data' not in data:
-        print("Error: 'data' key not found in API response")
+    if 'data' not in data or not data['data']:
+        print("Error: No metadata found in API response.")
         return {}
 
-    # Create a mapping of symbol to CoinMarketCap ID
     return {item['symbol'].upper(): item['id'] for item in data['data']}
 
 # =============================================
@@ -124,20 +122,17 @@ def calculate_certainty(price_change, rsi, volume):
     buy_score = 0
     sell_score = 0
 
-    # Give more weight to RSI influence
     if rsi < 30:
-        buy_score += (30 - rsi) * 2  # Increase multiplier for oversold
+        buy_score += (30 - rsi) * 2
     elif rsi > 70:
-        sell_score += (rsi - 70) * 2  # Increase multiplier for overbought
+        sell_score += (rsi - 70) * 2
 
-    # Emphasize price changes over volume
     if price_change < 0:
-        buy_score += abs(price_change) * 3  # Heavily favor negative price changes
+        buy_score += abs(price_change) * 3
     elif price_change > 0:
-        sell_score += price_change * 3  # Heavily favor positive price changes
+        sell_score += price_change * 3
 
-    # Reduce volume influence
-    buy_score += volume * 0.0005  # Half the previous weight
+    buy_score += volume * 0.0005
     sell_score += volume * 0.0005
 
     total_score = buy_score + sell_score
@@ -147,31 +142,23 @@ def calculate_certainty(price_change, rsi, volume):
     return round(buy_certainty, 2), round(sell_certainty, 2)
 
 # =============================================
-# ANALYZE DATA (FILTER FOR COINBASE SYMBOLS)
+# ANALYZE DATA
 # =============================================
 def analyze_data(data, coinbase_symbols):
-    """
-    data: list of coin data from CoinMarketCap
-    coinbase_symbols: set of symbols (e.g., {'BTC','ETH'}) tradable on Coinbase
-    """
     signals = []
     for coin in data:
         symbol = coin['symbol']
-
-        # FILTER: Only analyze if the symbol is supported by Coinbase
         if symbol not in coinbase_symbols:
             continue
 
         name = coin['name']
         price = coin['quote']['USD']['price']
         volume_24h = coin['quote']['USD']['volume_24h']
-        percent_change_24h = coin['quote']['USD']['percent_change_24h']
+        percent_change_24h = coin['quote']['USD'].get('percent_change_24h', 0)
 
-        # Simplified RSI calculation using dummy historical prices
         dummy_prices = [price * (1 - (percent_change_24h / 100))] * 14 + [price]
         rsi = calculate_rsi(dummy_prices)
 
-        # Calculate buy/sell certainty
         buy_certainty, sell_certainty = calculate_certainty(
             percent_change_24h, rsi, volume_24h
         )
@@ -189,35 +176,21 @@ def analyze_data(data, coinbase_symbols):
 
     return signals
 
-# Calculate projected profit per $100 investment
 def calculate_projected_profit(best_signal, holding_time_days):
-    """
-    Calculate projected profit per $100 investment based on the holding time and daily percent change.
-    """
-    daily_percent_change = best_signal['percent_change_24h'] / 100  # Convert to decimal
+    daily_percent_change = best_signal['percent_change_24h'] / 100
     projected_price = best_signal['price'] * ((1 + daily_percent_change) ** holding_time_days)
-
-    # Calculate profit per $100
     initial_investment = 100
     projected_profit = (projected_price - best_signal['price']) * (initial_investment / best_signal['price'])
     return round(projected_profit, 2)
 
 def calculate_holding_time(best_signal):
-    """
-    Suggest a holding time based on historical volatility and price trends.
-    """
-    # Use the past 24h percent change as a volatility proxy
     percent_change_24h = abs(best_signal['percent_change_24h'])
-
-    # Estimate holding time inversely proportional to volatility
-    # Lower volatility -> Longer holding time (e.g., 7-14 days)
-    # Higher volatility -> Shorter holding time (e.g., 1-2 days)
-    if percent_change_24h < 2:  # Low volatility
-        return 14  # Hold for 2 weeks
-    elif percent_change_24h < 5:  # Moderate volatility
-        return 7  # Hold for 1 week
-    else:  # High volatility
-        return 2  # Hold for 2 days
+    if percent_change_24h < 2:
+        return 14
+    elif percent_change_24h < 5:
+        return 7
+    else:
+        return 2
 
 # =============================================
 # MAIN SCRIPT
@@ -244,14 +217,11 @@ if __name__ == "__main__":
     print("Fetching cryptocurrency metadata...")
     crypto_metadata = fetch_crypto_metadata()
 
-    # Add 'coin_id' to each buy signal
     for signal in buy_signals:
-        signal['coin_id'] = crypto_metadata.get(signal['symbol'], None)
+        signal['coin_id'] = crypto_metadata.get(signal['symbol'], None) or "N/A"
 
-    # Get current UTC time
     timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
 
-    # Handle best signal and results
     if buy_signals:
         best_signal = max(buy_signals, key=lambda x: x['buy'])
         holding_time_days = calculate_holding_time(best_signal)
@@ -267,6 +237,7 @@ if __name__ == "__main__":
         projected_profit = None
         print("No strong buy signals found.")
 
+    os.makedirs('scripts', exist_ok=True)
     results = {
         "buy_signals": buy_signals,
         "top_10_cryptos": top_10_cryptos,
@@ -275,7 +246,6 @@ if __name__ == "__main__":
         "projected_profit_per_100": projected_profit,
         "timestamp": timestamp
     }
-
     with open("scripts/output.json", "w") as f:
         json.dump(results, f, indent=2)
 
