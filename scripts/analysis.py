@@ -1,6 +1,7 @@
 from datetime import datetime
 import json
 import requests
+import numpy as np
 import os
 import pandas as pd
 
@@ -101,36 +102,6 @@ def calculate_rsi(prices, window=14):
     rsi = 100 - (100 / (1 + rs))
     return rsi.iloc[-1]
 
-# =============================================
-# CALCULATE BUY/SELL CERTAINTY
-# =============================================
-# def calculate_certainty(price_change, rsi, volume):
-#     # Example weights for buy/sell calculation
-#     buy_score = 0
-#     sell_score = 0
-
-#     # RSI contribution (lower RSI favors buy)
-#     if rsi < 30:
-#         buy_score += (30 - rsi) * 1.5  # Oversold zone
-#     elif rsi > 70:
-#         sell_score += (rsi - 70) * 1.5  # Overbought zone
-
-#     # Price change contribution
-#     if price_change < 0:
-#         buy_score += abs(price_change) * 2  # Favor negative price changes for buy
-#     elif price_change > 0:
-#         sell_score += price_change * 2      # Favor positive price changes for sell
-
-#     # Volume contribution (higher volume increases confidence for both)
-#     buy_score += volume * 0.001
-#     sell_score += volume * 0.001
-
-#     # Normalize scores to 0-100%
-#     total_score = buy_score + sell_score
-#     buy_certainty = (buy_score / total_score) * 100 if total_score > 0 else 0
-#     sell_certainty = (sell_score / total_score) * 100 if total_score > 0 else 0
-
-#     return round(buy_certainty, 2), round(sell_certainty, 2)
 
 def calculate_certainty(price_change, rsi, volume):
     buy_score = 0
@@ -212,6 +183,23 @@ def calculate_projected_profit(best_signal, holding_time_days):
     projected_profit = (projected_price - best_signal['price']) * (initial_investment / best_signal['price'])
     return round(projected_profit, 2)
 
+def calculate_holding_time(best_signal):
+    """
+    Suggest a holding time based on historical volatility and price trends.
+    """
+    # Use the past 24h percent change as a volatility proxy
+    percent_change_24h = abs(best_signal['percent_change_24h'])
+
+    # Estimate holding time inversely proportional to volatility
+    # Lower volatility -> Longer holding time (e.g., 7-14 days)
+    # Higher volatility -> Shorter holding time (e.g., 1-2 days)
+    if percent_change_24h < 2:  # Low volatility
+        return 14  # Hold for 2 weeks
+    elif percent_change_24h < 5:  # Moderate volatility
+        return 7  # Hold for 1 week
+    else:  # High volatility
+        return 2  # Hold for 2 days
+
 # =============================================
 # MAIN SCRIPT
 # =============================================
@@ -262,7 +250,7 @@ if __name__ == "__main__":
     # SAVE RESULTS TO A JSON FILE
     # -------------------------------------------------
     # JSON Output
-    holding_time_days = 30  # Example holding period in days
+    holding_time_days = calculate_holding_time(best_signal)
     projected_profit = calculate_projected_profit(best_signal, holding_time_days)
     
     results = {
