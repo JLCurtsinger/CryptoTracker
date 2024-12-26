@@ -58,6 +58,23 @@ def fetch_crypto_data():
 
     return data['data']
 
+def fetch_crypto_metadata():
+    headers = {'X-CMC_PRO_API_KEY': API_KEY}
+    url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/map"
+    response = requests.get(url, headers=headers)
+
+    if response.status_code != 200:
+        print(f"Error: Received status code {response.status_code}")
+        return {}
+
+    data = response.json()
+    if 'data' not in data:
+        print("Error: 'data' key not found in API response")
+        return {}
+
+    # Create a mapping of symbol to CoinMarketCap ID
+    return {item['symbol'].upper(): item['id'] for item in data['data']}
+
 # =============================================
 # FETCH TOP 10 CRYPTOS BY MARKET CAP
 # =============================================
@@ -221,6 +238,13 @@ if __name__ == "__main__":
 
     print("Analyzing data (only for Coinbase-supported coins)...")
     buy_signals = analyze_data(crypto_data, coinbase_symbols)
+
+    print("Fetching cryptocurrency metadata...")
+    crypto_metadata = fetch_crypto_metadata()
+    
+    # Add 'coin_id' to each buy signal
+    for signal in buy_signals:
+        signal['coin_id'] = crypto_metadata.get(signal['symbol'], None)
 
     # DISPLAY RESULTS to console
     if buy_signals:
