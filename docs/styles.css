@@ -1,16 +1,46 @@
-/* General page styling */
+/* General Styling */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif; /* Clean and modern font */
   margin: 20px;
   background-color: #f8f9fa;
+  color: #333; /* Darker text for readability */
+  line-height: 1.6; /* Space between lines */
+  font-size: 18px; /* Base font size for the body */
 }
 
+/* Title Styling */
 h1 {
   text-align: center;
   color: #343a40;
+  font-size: 32px; /* Make the main title larger */
+  margin-bottom: 20px;
 }
 
-/* Table styling */
+h2 {
+  text-align: center;
+  color: #007bff; /* Blue to differentiate headings */
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+/* About Section Styling */
+#about {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+#about p {
+  font-size: 18px; /* Slightly larger for readability */
+  color: #495057;
+  text-align: justify;
+}
+
+/* Table Styling */
 table {
   width: 90%;
   margin: 20px auto;
@@ -22,7 +52,8 @@ table {
 
 th, td {
   text-align: center;
-  padding: 12px;
+  padding: 15px; /* Add more padding for readability */
+  font-size: 18px; /* Larger text for table data */
   border: 1px solid #ddd;
 }
 
