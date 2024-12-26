@@ -252,7 +252,7 @@ if __name__ == "__main__":
     # -------------------------------------------------
     # JSON Output
     results = {
-        "buy_signals": buy_signals
+        "buy_signals": buy_signals,
         "top_10_cryptos": top_10_cryptos,
         "best_bet": best_signal,
         "timestamp": timestamp
