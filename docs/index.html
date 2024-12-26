@@ -16,12 +16,21 @@
   <section id="about">
 <!--     <h2>About This Website</h2> -->
     <p>
-      This website provides real-time cryptocurrency analysis tailored specifically for assets tradable on Coinbase (https://www.coinbase.com/). Using advanced data processing, it fetches live crypto data from CoinMarketCap and filters it based on Coinbase’s available trading pairs. For each cryptocurrency, key metrics are calculated, including the Relative Strength Index (RSI) to identify overbought or oversold conditions, and Buy/Sell Certainty Scores, which are based on price changes, trading volume, and RSI values. The results are dynamically displayed on the table, showing price, RSI, volume, and the buy/sell confidence levels.
+      This website provides real-time cryptocurrency analysis for assets available on Coinbase.com. It fetches live crypto data from CoinMarketCap.com. For each cryptocurrency, key metrics are calculated, including the Relative Strength Index (RSI) to identify overbought or oversold conditions, and Buy/Sell Certainty Scores, which are based on price changes, trading volume, and RSI values. The results are dynamically displayed on the table, showing price, RSI, volume, and the buy/sell confidence levels.
     </p>
     <p>
-      Automated backend processing ensures the data stays up to date, with GitHub Actions running the analysis script and updating the information seamlessly. This makes the website an easy-to-use tool for traders and investors looking to make informed decisions in the fast-moving crypto market.
+      Automated backend processing ensures the data stays up to date, with GitHub Actions running the analysis script and updating the information seamlessly. This makes the website an easy-to-use tool for traders and investors looking to potentially make slightly better decisions in the fast-moving crypto market.
     </p>
   </section>
+  
+  <!-- Best Bet Section -->
+  <section id="best-bet"></section>
+  
+    <!-- Signals Table -->
+  <div id="signals"></div>
+
+  <!-- Top 10 Cryptos Table -->
+  <section id="top-10"></section>
 
   <!-- Script Section -->
   <script>
@@ -55,6 +64,82 @@
     }
 
     loadSignals();
+    async function loadTop10() {
+      const response = await fetch('./output.json');
+      if (!response.ok) {
+        document.getElementById('top-10').innerText = "Failed to load top 10 cryptos.";
+        return;
+      }
+    
+      const data = await response.json();
+      const top10 = data.top_10_cryptos || [];
+      const timestamp = data.timestamp;
+    
+      if (top10.length === 0) {
+        document.getElementById('top-10').innerText = "No data available.";
+        return;
+      }
+    
+      let html = `<h2>Top 10 Cryptos by Market Cap</h2>
+                  <p>Data collected at: ${timestamp}</p>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Rank</th>
+                        <th>Coin</th>
+                        <th>Symbol</th>
+                        <th>Market Cap</th>
+                        <th>Price</th>
+                        <th>Volume (24h)</th>
+                      </tr>
+                    </thead>
+                    <tbody>`;
+    
+      for (let coin of top10) {
+        html += `<tr>
+                  <td>${coin.rank}</td>
+                  <td>${coin.name}</td>
+                  <td>${coin.symbol}</td>
+                  <td>$${coin.market_cap.toLocaleString()}</td>
+                  <td>$${coin.price.toFixed(2)}</td>
+                  <td>$${coin.volume.toLocaleString()}</td>
+                </tr>`;
+      }
+    
+      html += "</tbody></table>";
+      document.getElementById('top-10').innerHTML = html;
+    }
+    
+    loadTop10();
+    async function loadBestBet() {
+      const response = await fetch('./output.json');
+      if (!response.ok) {
+        document.getElementById('best-bet').innerText = "Failed to load best bet.";
+        return;
+      }
+    
+      const data = await response.json();
+      const bestBet = data.best_bet;
+    
+      if (!bestBet) {
+        document.getElementById('best-bet').innerText = "No profitable coin found.";
+        return;
+      }
+    
+      const suggestedBuyIn = 100; // Suggested buy-in amount in USD
+      const suggestedHoldTime = "1-2 weeks"; // Example holding time
+    
+      const html = `<h2>Your Best Bet</h2>
+                    <p>The coin with the highest chance of profitability is:</p>
+                    <p><strong>${bestBet.name} (${bestBet.symbol})</strong></p>
+                    <p>Price: $${bestBet.price.toFixed(2)}</p>
+                    <p>Suggested Buy-In: $${suggestedBuyIn}</p>
+                    <p>Suggested Holding Time: ${suggestedHoldTime}</p>`;
+    
+      document.getElementById('best-bet').innerHTML = html;
+    }
+    
+    loadBestBet();
   </script>
 </body>
 </html>
