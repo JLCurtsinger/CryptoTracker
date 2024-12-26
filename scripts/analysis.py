@@ -191,9 +191,11 @@ def analyze_data(data, coinbase_symbols):
 
 # Calculate projected profit per $100 investment
 def calculate_projected_profit(best_signal, holding_time_days):
-    # Assume the price change (percent_change_24h) continues over the holding time
-    daily_percent_change = best_signal['price'] * (best_signal['buy'] / 100)
-    projected_price = best_signal['price'] * ((1 + (daily_percent_change / 100)) ** holding_time_days)
+    """
+    Calculate projected profit per $100 investment based on the holding time and daily percent change.
+    """
+    daily_percent_change = best_signal['percent_change_24h'] / 100  # Convert to decimal
+    projected_price = best_signal['price'] * ((1 + daily_percent_change) ** holding_time_days)
 
     # Calculate profit per $100
     initial_investment = 100
@@ -241,43 +243,30 @@ if __name__ == "__main__":
 
     print("Fetching cryptocurrency metadata...")
     crypto_metadata = fetch_crypto_metadata()
-    
+
     # Add 'coin_id' to each buy signal
     for signal in buy_signals:
         signal['coin_id'] = crypto_metadata.get(signal['symbol'], None)
 
-    # DISPLAY RESULTS to console
+    # Get current UTC time
+    timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
+
+    # Handle best signal and results
     if buy_signals:
-        print("\nPotential Buy Signals (Coinbase-Only):")
-        print(f"{'Coin':<10} {'Price ($)':<10} {'RSI':<6} {'Volume ($)':<15}")
-        print("-" * 45)
-        for signal in buy_signals:
-            print(f"{signal['symbol']:<10} {signal['price']:<10.2f} {signal['rsi']:<6.2f} {signal['volume']:<15.2f}")
+        best_signal = max(buy_signals, key=lambda x: x['buy'])
+        holding_time_days = calculate_holding_time(best_signal)
+        projected_profit = calculate_projected_profit(best_signal, holding_time_days)
 
-        print("\nBuy/Sell Certainty Scores:")
-        print(f"{'Coin':<10} {'Price ($)':<10} {'Buy (%)':<10} {'Sell (%)':<10}")
-        print("-" * 45)
-        for signal in buy_signals:
-            print(f"{signal['symbol']:<10} {signal['price']:<10.2f} {signal['buy']:<10.2f} {signal['sell']:<10.2f}")
-
-        # best_signal = max(buy_signals, key=lambda x: max(x['buy'], x['sell']))
-         # Identify the coin with the highest buy chance
-        best_signal = max(buy_signals, key=lambda x: x['buy']) if buy_signals else None
-        # Get current UTC time
-        timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
-        decision = "BUY" if best_signal['buy'] > best_signal['sell'] else "SELL"
-        certainty = max(best_signal['buy'], best_signal['sell'])
-        print(f"\nBest Decision: {decision} {certainty}% for {best_signal['symbol']} "
+        print(f"Best Decision: BUY with {best_signal['buy']}% certainty for {best_signal['symbol']} "
               f"({best_signal['name']}) at ${best_signal['price']:.2f}")
+        print(f"Suggested holding time: {holding_time_days} days")
+        print(f"Projected profit per $100: ${projected_profit}")
     else:
-        print("No buy signals found among Coinbase-supported coins.")
+        best_signal = None
+        holding_time_days = None
+        projected_profit = None
+        print("No strong buy signals found.")
 
-    # SAVE RESULTS TO A JSON FILE
-    # -------------------------------------------------
-    # JSON Output
-    holding_time_days = calculate_holding_time(best_signal)
-    projected_profit = calculate_projected_profit(best_signal, holding_time_days)
-    
     results = {
         "buy_signals": buy_signals,
         "top_10_cryptos": top_10_cryptos,
@@ -286,7 +275,8 @@ if __name__ == "__main__":
         "projected_profit_per_100": projected_profit,
         "timestamp": timestamp
     }
-    # This creates/overwrites 'scripts/output.json' with the final signals
+
     with open("scripts/output.json", "w") as f:
         json.dump(results, f, indent=2)
+
     print("\nSuccessfully wrote buy signals to scripts/output.json")
