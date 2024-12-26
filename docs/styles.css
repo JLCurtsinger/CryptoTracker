@@ -26,18 +26,19 @@ h2 {
 /* About Section Styling */
 #about {
   width: 80%;
-  margin: 20px auto;
+  margin: 20px auto; /* Centers the section horizontally */
   padding: 20px;
   background-color: #ffffff;
   border: 1px solid #ddd;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  text-align: center; /* Center-aligns the text */
 }
 
 #about p {
-  font-size: 18px; /* Slightly larger for readability */
+  line-height: 1.6;
+  font-size: 18px;
   color: #495057;
-  text-align: justify;
 }
 
 /* Table Styling */
