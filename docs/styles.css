@@ -8,6 +8,22 @@ body {
   font-size: 18px; /* Base font size for the body */
 }
 
+/* Best Bet Section */
+#best-bet {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#best-bet h2 {
+  color: #007bff;
+}
+
 /* Title Styling */
 h1 {
   text-align: center;
@@ -74,4 +90,26 @@ tr:nth-child(even) {
 
 tr:hover {
   background-color: #e9ecef;
+}
+
+#top-10 {
+  width: 90%;
+  margin: 20px auto;
+}
+
+#top-10 table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+#top-10 th, #top-10 td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+#top-10 th {
+  background-color: #007bff;
+  color: white;
 }
