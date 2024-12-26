@@ -33,6 +33,16 @@ table tbody tr:hover {
   color: #3b05ed;
 }
 
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #f8f9fa; /* Light background color */
+  text-align: center;
+  font-size: 0.9em; /* Slightly smaller text */
+  color: #555; /* Muted text color */
+  border-top: 1px solid #ddd; /* Subtle border to separate from main content */
+}
+
 /* Title Styling */
 h1 {
   text-align: center;
