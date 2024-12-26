@@ -64,11 +64,11 @@
       const suggestedHoldTime = data.suggested_holding_time || "N/A";
       document.getElementById('holding-time').innerHTML = `Suggested Holding Time: ${suggestedHoldTime} days`;
   
-      // let html = "<table><thead><tr><th>Coin</th><th>Price</th><th>RSI</th><th>Volume</th><th>Buy (%)</th><th>Sell (%)</th></tr></thead><tbody>";
-      // for (let signal of buySignals) {
-      // const graphUrl = signal.coin_id
-      //     ? `https://s3.coinmarketcap.com/generated/sparklines/web/1d/usd/${signal.coin_id}.png`
-      //     : null;
+      let html = "<table><thead><tr><th>Coin</th><th>Price</th><th>RSI</th><th>Volume</th><th>Buy (%)</th><th>Sell (%)</th></tr></thead><tbody>";
+      for (let signal of buySignals) {
+      const graphUrl = signal.coin_id
+          ? `https://s3.coinmarketcap.com/generated/sparklines/web/1d/usd/${signal.coin_id}.png`
+          : null;
       
       // html += `<tr>
       //     <td>${signal.symbol}</td>
