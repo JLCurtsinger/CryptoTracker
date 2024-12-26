@@ -93,6 +93,10 @@ table {
   overflow: hidden; /* Ensures corners stay rounded even with table overflow */
 }
 
+table img {
+  border-radius: 50%;
+}
+
 th, td {
   text-align: center;
   padding: 15px; /* Add more padding for readability */
