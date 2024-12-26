@@ -70,28 +70,54 @@ def calculate_rsi(prices, window=14):
 # =============================================
 # CALCULATE BUY/SELL CERTAINTY
 # =============================================
+# def calculate_certainty(price_change, rsi, volume):
+#     # Example weights for buy/sell calculation
+#     buy_score = 0
+#     sell_score = 0
+
+#     # RSI contribution (lower RSI favors buy)
+#     if rsi < 30:
+#         buy_score += (30 - rsi) * 1.5  # Oversold zone
+#     elif rsi > 70:
+#         sell_score += (rsi - 70) * 1.5  # Overbought zone
+
+#     # Price change contribution
+#     if price_change < 0:
+#         buy_score += abs(price_change) * 2  # Favor negative price changes for buy
+#     elif price_change > 0:
+#         sell_score += price_change * 2      # Favor positive price changes for sell
+
+#     # Volume contribution (higher volume increases confidence for both)
+#     buy_score += volume * 0.001
+#     sell_score += volume * 0.001
+
+#     # Normalize scores to 0-100%
+#     total_score = buy_score + sell_score
+#     buy_certainty = (buy_score / total_score) * 100 if total_score > 0 else 0
+#     sell_certainty = (sell_score / total_score) * 100 if total_score > 0 else 0
+
+#     return round(buy_certainty, 2), round(sell_certainty, 2)
+
 def calculate_certainty(price_change, rsi, volume):
-    # Example weights for buy/sell calculation
     buy_score = 0
     sell_score = 0
 
-    # RSI contribution (lower RSI favors buy)
+    # Give more weight to RSI influence
     if rsi < 30:
-        buy_score += (30 - rsi) * 1.5  # Oversold zone
+        buy_score += (30 - rsi) * 2  # Increase multiplier for oversold
     elif rsi > 70:
-        sell_score += (rsi - 70) * 1.5  # Overbought zone
+        sell_score += (rsi - 70) * 2  # Increase multiplier for overbought
 
-    # Price change contribution
+    # Emphasize price changes over volume
     if price_change < 0:
-        buy_score += abs(price_change) * 2  # Favor negative price changes for buy
+        buy_score += abs(price_change) * 3  # Heavily favor negative price changes
     elif price_change > 0:
-        sell_score += price_change * 2      # Favor positive price changes for sell
+        sell_score += price_change * 3  # Heavily favor positive price changes
 
-    # Volume contribution (higher volume increases confidence for both)
-    buy_score += volume * 0.001
-    sell_score += volume * 0.001
+    # Reduce volume influence
+    buy_score += volume * 0.0005  # Half the previous weight
+    sell_score += volume * 0.0005
 
-    # Normalize scores to 0-100%
     total_score = buy_score + sell_score
     buy_certainty = (buy_score / total_score) * 100 if total_score > 0 else 0
     sell_certainty = (sell_score / total_score) * 100 if total_score > 0 else 0
