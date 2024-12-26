@@ -201,6 +201,17 @@ def analyze_data(data, coinbase_symbols):
 
     return signals
 
+# Calculate projected profit per $100 investment
+def calculate_projected_profit(best_signal, holding_time_days):
+    # Assume the price change (percent_change_24h) continues over the holding time
+    daily_percent_change = best_signal['price'] * (best_signal['buy'] / 100)
+    projected_price = best_signal['price'] * ((1 + (daily_percent_change / 100)) ** holding_time_days)
+
+    # Calculate profit per $100
+    initial_investment = 100
+    projected_profit = (projected_price - best_signal['price']) * (initial_investment / best_signal['price'])
+    return round(projected_profit, 2)
+
 # =============================================
 # MAIN SCRIPT
 # =============================================
@@ -251,10 +262,15 @@ if __name__ == "__main__":
     # SAVE RESULTS TO A JSON FILE
     # -------------------------------------------------
     # JSON Output
+    holding_time_days = 30  # Example holding period in days
+    projected_profit = calculate_projected_profit(best_signal, holding_time_days)
+    
     results = {
         "buy_signals": buy_signals,
         "top_10_cryptos": top_10_cryptos,
         "best_bet": best_signal,
+        "suggested_holding_time": holding_time_days,
+        "projected_profit_per_100": projected_profit,
         "timestamp": timestamp
     }
     # This creates/overwrites 'scripts/output.json' with the final signals
