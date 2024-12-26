@@ -1,0 +1,85 @@
+{
+  "buy_signals": [
+    {
+      "symbol": "ICP",
+      "name": "Internet Computer",
+      "price": 11.05518660011155,
+      "rsi": 0.0,
+      "volume": 181420718.0770701,
+      "buy": 50.01,
+      "sell": 49.99
+    },
+    {
+      "symbol": "POL",
+      "name": "POL (ex-MATIC)",
+      "price": 0.5089344673528117,
+      "rsi": 0.0,
+      "volume": 180400277.29886192,
+      "buy": 50.01,
+      "sell": 49.99
+    },
+    {
+      "symbol": "CRO",
+      "name": "Cronos",
+      "price": 0.1557766682144914,
+      "rsi": 0.0,
+      "volume": 33707937.58001598,
+      "buy": 50.04,
+      "sell": 49.96
+    },
+    {
+      "symbol": "VET",
+      "name": "VeChain",
+      "price": 0.050794756779722526,
+      "rsi": 0.0,
+      "volume": 83777056.62985383,
+      "buy": 50.02,
+      "sell": 49.98
+    },
+    {
+      "symbol": "ETC",
+      "name": "Ethereum Classic",
+      "price": 27.019943492687272,
+      "rsi": 0.0,
+      "volume": 207644020.90902543,
+      "buy": 50.01,
+      "sell": 49.99
+    },
+    {
+      "symbol": "FET",
+      "name": "Artificial Superintelligence Alliance",
+      "price": 1.330940233418275,
+      "rsi": 0.0,
+      "volume": 208804867.01307985,
+      "buy": 50.01,
+      "sell": 49.99
+    },
+    {
+      "symbol": "FIL",
+      "name": "Filecoin",
+      "price": 5.263405022011715,
+      "rsi": 0.0,
+      "volume": 252126943.6267175,
+      "buy": 50.01,
+      "sell": 49.99
+    },
+    {
+      "symbol": "ALGO",
+      "name": "Algorand",
+      "price": 0.3743674843203364,
+      "rsi": 0.0,
+      "volume": 180835739.48299137,
+      "buy": 50.01,
+      "sell": 49.99
+    },
+    {
+      "symbol": "ATOM",
+      "name": "Cosmos",
+      "price": 6.8597121289780105,
+      "rsi": 0.0,
+      "volume": 167840358.4141692,
+      "buy": 50.01,
+      "sell": 49.99
+    }
+  ]
+}
