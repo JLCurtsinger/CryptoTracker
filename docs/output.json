@@ -3,10 +3,10 @@
     {
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.35687756786210134,
+      "price": 0.35561865441713447,
       "rsi": 0.0,
-      "volume": 291079775.855726,
-      "percent_change_24h": -0.14917338,
+      "volume": 290608532.51571864,
+      "percent_change_24h": -0.31819152,
       "buy": 50.01,
       "sell": 49.99,
       "coin_id": {
@@ -17,15 +17,29 @@
     {
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 335.14308547406915,
+      "price": 334.15446379976913,
       "rsi": 0.0,
-      "volume": 600602055.5444704,
-      "percent_change_24h": -0.76604099,
+      "volume": 601906347.7087784,
+      "percent_change_24h": -0.82363864,
       "buy": 50.01,
       "sell": 49.99,
       "coin_id": {
         "id": 7278,
         "icon_url": "https://s2.coinmarketcap.com/static/img/coins/64x64/7278.png"
+      }
+    },
+    {
+      "symbol": "ALGO",
+      "name": "Algorand",
+      "price": 0.34972055325423496,
+      "rsi": 0.0,
+      "volume": 222959487.01864412,
+      "percent_change_24h": -0.41445746,
+      "buy": 50.01,
+      "sell": 49.99,
+      "coin_id": {
+        "id": 4030,
+        "icon_url": "https://s2.coinmarketcap.com/static/img/coins/64x64/4030.png"
       }
     }
   ],
@@ -34,90 +48,90 @@
       "rank": 1,
       "name": "Bitcoin",
       "symbol": "BTC",
-      "market_cap": 1908241382683.8188,
-      "price": 96366.87210298734,
-      "volume": 47284809174.00921
+      "market_cap": 1907974500912.8562,
+      "price": 96353.39447813215,
+      "volume": 47251781694.40096
     },
     {
       "rank": 2,
       "name": "Ethereum",
       "symbol": "ETH",
-      "market_cap": 408653840679.81946,
-      "price": 3392.317897342282,
-      "volume": 23555733403.015526
+      "market_cap": 407896092501.3322,
+      "price": 3386.0276769854036,
+      "volume": 23494828412.148502
     },
     {
       "rank": 3,
       "name": "Tether USDt",
       "symbol": "USDT",
-      "market_cap": 139267225657.91638,
-      "price": 0.9987567776358273,
-      "volume": 102974857804.45049
+      "market_cap": 139285135204.0671,
+      "price": 0.9988852161863758,
+      "volume": 102883840303.60501
     },
     {
       "rank": 4,
       "name": "XRP",
       "symbol": "XRP",
-      "market_cap": 125841716714.25381,
-      "price": 2.1919738556122907,
-      "volume": 5547862935.486437
+      "market_cap": 125538775521.38336,
+      "price": 2.186697074653653,
+      "volume": 5542503909.081385
     },
     {
       "rank": 5,
       "name": "BNB",
       "symbol": "BNB",
-      "market_cap": 101339649476.08943,
-      "price": 703.7118216927024,
-      "volume": 1148763801.84574
+      "market_cap": 101135231697.04655,
+      "price": 702.2923488049768,
+      "volume": 1145762419.8527346
     },
     {
       "rank": 6,
       "name": "Solana",
       "symbol": "SOL",
-      "market_cap": 91038964368.12532,
-      "price": 189.8485917081118,
-      "volume": 2735794818.5289793
+      "market_cap": 90725091319.60985,
+      "price": 189.19410628321288,
+      "volume": 2736183285.4211383
     },
     {
       "rank": 7,
       "name": "Dogecoin",
       "symbol": "DOGE",
-      "market_cap": 46863263657.47663,
-      "price": 0.3179871553770109,
-      "volume": 2303808352.637702
+      "market_cap": 46744037293.74252,
+      "price": 0.3171775512300293,
+      "volume": 2295900922.908475
     },
     {
       "rank": 8,
       "name": "USDC",
       "symbol": "USDC",
-      "market_cap": 43565773340.334526,
-      "price": 0.9999468425507211,
-      "volume": 6442921256.569828
+      "market_cap": 43573794978.32032,
+      "price": 1.0000776097850663,
+      "volume": 6448126562.7494335
     },
     {
       "rank": 9,
       "name": "Cardano",
       "symbol": "ADA",
-      "market_cap": 31488949543.3581,
-      "price": 0.8963066959401813,
-      "volume": 864518089.7974511
+      "market_cap": 31381473436.00673,
+      "price": 0.893247478148874,
+      "volume": 862963840.4189382
     },
     {
       "rank": 10,
       "name": "TRON",
       "symbol": "TRX",
-      "market_cap": 22631331593.190994,
-      "price": 0.26252890437943266,
-      "volume": 1220486948.929231
+      "market_cap": 22597683546.259216,
+      "price": 0.2621390764471598,
+      "volume": 1221035354.9115958
     }
   ],
   "best_bet": {
     "symbol": "XLM",
     "name": "Stellar",
-    "price": 0.35687756786210134,
+    "price": 0.35561865441713447,
     "rsi": 0.0,
-    "volume": 291079775.855726,
-    "percent_change_24h": -0.14917338,
+    "volume": 290608532.51571864,
+    "percent_change_24h": -0.31819152,
     "buy": 50.01,
     "sell": 49.99,
     "coin_id": {
@@ -126,6 +140,6 @@
     }
   },
   "suggested_holding_time": 14,
-  "projected_profit_per_100": -2.07,
-  "timestamp": "2024-12-27 13:37:31 UTC"
+  "projected_profit_per_100": -4.36,
+  "timestamp": "2024-12-27 13:42:59 UTC"
 }
