@@ -3,10 +3,10 @@
     {
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.3582724205524958,
+      "price": 0.35715026905731223,
       "rsi": 0.0,
-      "volume": 290989375.50475013,
-      "percent_change_24h": -0.10394836,
+      "volume": 290537394.9067449,
+      "percent_change_24h": -0.43845707,
       "buy": 50.01,
       "sell": 49.99,
       "coin_id": {
@@ -17,10 +17,10 @@
     {
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 336.2438831517017,
+      "price": 335.73125734458455,
       "rsi": 0.0,
-      "volume": 597776610.2290101,
-      "percent_change_24h": -0.46415986,
+      "volume": 596715676.0255742,
+      "percent_change_24h": -0.89851034,
       "buy": 50.01,
       "sell": 49.99,
       "coin_id": {
@@ -34,90 +34,90 @@
       "rank": 1,
       "name": "Bitcoin",
       "symbol": "BTC",
-      "market_cap": 1908406272318.836,
-      "price": 96375.2574923303,
-      "volume": 47113927068.9601
+      "market_cap": 1909386493430.5554,
+      "price": 96424.70060512333,
+      "volume": 47207992901.42667
     },
     {
       "rank": 2,
       "name": "Ethereum",
       "symbol": "ETH",
-      "market_cap": 409744067166.9814,
-      "price": 3401.3680871518372,
-      "volume": 23881104721.08765
+      "market_cap": 409107993970.39703,
+      "price": 3396.0879153438264,
+      "volume": 23531497116.17595
     },
     {
       "rank": 3,
       "name": "Tether USDt",
       "symbol": "USDT",
-      "market_cap": 139280067019.4365,
-      "price": 0.9988488696322871,
-      "volume": 102874742674.52797
+      "market_cap": 139294155553.22607,
+      "price": 0.9989499057414135,
+      "volume": 102870023819.33006
     },
     {
       "rank": 4,
       "name": "XRP",
       "symbol": "XRP",
-      "market_cap": 126123284311.53441,
-      "price": 2.1968783406109185,
-      "volume": 5559759439.232575
+      "market_cap": 126062072164.81558,
+      "price": 2.195812116875603,
+      "volume": 5552416427.758221
     },
     {
       "rank": 5,
       "name": "BNB",
       "symbol": "BNB",
-      "market_cap": 101540706588.76843,
-      "price": 705.1079709821007,
-      "volume": 1185249493.2715964
+      "market_cap": 101428180984.53094,
+      "price": 704.3265926081799,
+      "volume": 1150280808.908071
     },
     {
       "rank": 6,
       "name": "Solana",
       "symbol": "SOL",
-      "market_cap": 91327306038.30342,
-      "price": 190.4498452043869,
-      "volume": 2743585628.617494
+      "market_cap": 91233026834.12526,
+      "price": 190.25328091046825,
+      "volume": 2736262621.224411
     },
     {
       "rank": 7,
       "name": "Dogecoin",
       "symbol": "DOGE",
-      "market_cap": 46953109065.36056,
-      "price": 0.3185974648073404,
-      "volume": 2315988079.1052723
+      "market_cap": 46909299820.21756,
+      "price": 0.31829953030124697,
+      "volume": 2308854166.546063
     },
     {
       "rank": 8,
       "name": "USDC",
       "symbol": "USDC",
-      "market_cap": 43578657918.30997,
-      "price": 1.0000565894738114,
-      "volume": 6712786726.416835
+      "market_cap": 43565997928.19832,
+      "price": 0.9999519974213467,
+      "volume": 6420673929.255882
     },
     {
       "rank": 9,
       "name": "Cardano",
       "symbol": "ADA",
-      "market_cap": 31593166841.119255,
-      "price": 0.8992731544334218,
-      "volume": 855134459.2916468
+      "market_cap": 31543926853.59284,
+      "price": 0.8978715792406016,
+      "volume": 858995243.4928422
     },
     {
       "rank": 10,
       "name": "TRON",
       "symbol": "TRX",
-      "market_cap": 22740371812.817837,
-      "price": 0.2637933876411567,
-      "volume": 1203743605.495304
+      "market_cap": 22658819075.34663,
+      "price": 0.2628477658014729,
+      "volume": 1216678633.499717
     }
   ],
   "best_bet": {
     "symbol": "XLM",
     "name": "Stellar",
-    "price": 0.3582724205524958,
+    "price": 0.35715026905731223,
     "rsi": 0.0,
-    "volume": 290989375.50475013,
-    "percent_change_24h": -0.10394836,
+    "volume": 290537394.9067449,
+    "percent_change_24h": -0.43845707,
     "buy": 50.01,
     "sell": 49.99,
     "coin_id": {
@@ -126,6 +126,6 @@
     }
   },
   "suggested_holding_time": 14,
-  "projected_profit_per_100": -1.45,
-  "timestamp": "2024-12-27 13:10:23 UTC"
+  "projected_profit_per_100": -5.97,
+  "timestamp": "2024-12-27 13:29:52 UTC"
 }
