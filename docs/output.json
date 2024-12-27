@@ -1,117 +1,89 @@
 {
-  "buy_signals": [
-    {
-      "symbol": "VET",
-      "name": "VeChain",
-      "price": 0.04785978954675807,
-      "rsi": 0.0,
-      "volume": 77457339.54174191,
-      "percent_change_24h": -0.02048706,
-      "buy": 50.04,
-      "sell": 49.96,
-      "coin_id": {
-        "id": 3077,
-        "icon_url": "https://s2.coinmarketcap.com/static/img/coins/64x64/3077.png"
-      }
-    }
-  ],
+  "buy_signals": [],
   "top_10_cryptos": [
     {
       "rank": 1,
       "name": "Bitcoin",
       "symbol": "BTC",
-      "market_cap": 1910606094233.9917,
-      "price": 96486.50527628866,
-      "volume": 47432342612.19321
+      "market_cap": 1909143691971.0374,
+      "price": 96412.5753729526,
+      "volume": 47331725965.66652
     },
     {
       "rank": 2,
       "name": "Ethereum",
       "symbol": "ETH",
-      "market_cap": 409343886616.0385,
-      "price": 3398.0461077404275,
-      "volume": 23665347501.569386
+      "market_cap": 410129890565.4554,
+      "price": 3404.570884946859,
+      "volume": 23737019622.75367
     },
     {
       "rank": 3,
       "name": "Tether USDt",
       "symbol": "USDT",
-      "market_cap": 139262696435.5898,
-      "price": 0.9987242962571345,
-      "volume": 103282017193.15607
+      "market_cap": 139256030403.47162,
+      "price": 0.9986764907183473,
+      "volume": 103351580780.67262
     },
     {
       "rank": 4,
       "name": "XRP",
       "symbol": "XRP",
-      "market_cap": 125964981813.33084,
-      "price": 2.1941209486553697,
-      "volume": 5633579152.79171
+      "market_cap": 126216327956.2131,
+      "price": 2.1984990212714477,
+      "volume": 5650280373.5765505
     },
     {
       "rank": 5,
       "name": "BNB",
       "symbol": "BNB",
-      "market_cap": 101418979678.74193,
-      "price": 704.26264419946,
-      "volume": 1225923616.8218682
+      "market_cap": 101507409938.16043,
+      "price": 704.8767210408612,
+      "volume": 1224855680.0019064
     },
     {
       "rank": 6,
       "name": "Solana",
       "symbol": "SOL",
-      "market_cap": 91430951174.40866,
-      "price": 190.6658211236217,
-      "volume": 2775930942.024538
+      "market_cap": 91579866010.86946,
+      "price": 190.976397810136,
+      "volume": 2774457839.5495296
     },
     {
       "rank": 7,
       "name": "Dogecoin",
       "symbol": "DOGE",
-      "market_cap": 47076703211.11314,
-      "price": 0.31943922661456714,
-      "volume": 2313388268.0198874
+      "market_cap": 47189160463.93347,
+      "price": 0.3202011109179327,
+      "volume": 2316168145.0799484
     },
     {
       "rank": 8,
       "name": "USDC",
       "symbol": "USDC",
-      "market_cap": 43558353026.40637,
-      "price": 0.9999109170988432,
-      "volume": 6305297436.896572
+      "market_cap": 43570197404.49235,
+      "price": 0.9999399928006539,
+      "volume": 6333051208.632904
     },
     {
       "rank": 9,
       "name": "Cardano",
       "symbol": "ADA",
-      "market_cap": 31465163393.88007,
-      "price": 0.8956296430261602,
-      "volume": 844168081.9843863
+      "market_cap": 31657511051.966686,
+      "price": 0.9011046587504562,
+      "volume": 847195937.9383879
     },
     {
       "rank": 10,
       "name": "TRON",
       "symbol": "TRX",
-      "market_cap": 22305280645.750607,
-      "price": 0.258744244175239,
-      "volume": 1064227011.5775921
+      "market_cap": 22405682615.524807,
+      "price": 0.2599096918968543,
+      "volume": 1069496347.2446445
     }
   ],
-  "best_bet": {
-    "symbol": "VET",
-    "name": "VeChain",
-    "price": 0.04785978954675807,
-    "rsi": 0.0,
-    "volume": 77457339.54174191,
-    "percent_change_24h": -0.02048706,
-    "buy": 50.04,
-    "sell": 49.96,
-    "coin_id": {
-      "id": 3077,
-      "icon_url": "https://s2.coinmarketcap.com/static/img/coins/64x64/3077.png"
-    }
-  },
-  "suggested_holding_time": 14,
-  "projected_profit_per_100": -0.29,
-  "timestamp": "2024-12-27 11:01:04 UTC"
+  "best_bet": null,
+  "suggested_holding_time": null,
+  "projected_profit_per_100": null,
+  "timestamp": "2024-12-27 11:19:33 UTC"
 }
