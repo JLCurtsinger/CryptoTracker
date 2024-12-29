@@ -1,89 +1,117 @@
 {
-  "buy_signals": [],
+  "buy_signals": [
+    {
+      "symbol": "DAI",
+      "name": "Dai",
+      "price": 0.9999406012548265,
+      "rsi": 0.0,
+      "volume": 129009112.592579,
+      "percent_change_24h": -0.01253602,
+      "buy": 50.02,
+      "sell": 49.98,
+      "coin_id": {
+        "id": 4943,
+        "icon_url": "https://s2.coinmarketcap.com/static/img/coins/64x64/4943.png"
+      }
+    }
+  ],
   "top_10_cryptos": [
     {
       "rank": 1,
       "name": "Bitcoin",
       "symbol": "BTC",
-      "market_cap": 1879305091729.7383,
-      "price": 94901.26577078416,
-      "volume": 22854190888.46849
+      "market_cap": 1881462080203.537,
+      "price": 95010.18950930715,
+      "volume": 22782318684.159294
     },
     {
       "rank": 2,
       "name": "Ethereum",
       "symbol": "ETH",
-      "market_cap": 407831276259.23285,
-      "price": 3385.370705947451,
-      "volume": 13353563210.293285
+      "market_cap": 408721623283.94806,
+      "price": 3392.7613964389825,
+      "volume": 13314927721.405394
     },
     {
       "rank": 3,
       "name": "Tether USDt",
       "symbol": "USDT",
-      "market_cap": 138782331448.11163,
-      "price": 0.9983975742190758,
-      "volume": 64837251572.35474
+      "market_cap": 138754824453.84866,
+      "price": 0.9981996894014651,
+      "volume": 64721660402.106766
     },
     {
       "rank": 4,
       "name": "XRP",
       "symbol": "XRP",
-      "market_cap": 124892062344.04721,
-      "price": 2.1754323016211963,
-      "volume": 2458258721.1232667
+      "market_cap": 125134654835.49863,
+      "price": 2.179657898765876,
+      "volume": 2451339780.3587418
     },
     {
       "rank": 5,
       "name": "BNB",
       "symbol": "BNB",
-      "market_cap": 102284223678.88066,
-      "price": 710.2715961398238,
-      "volume": 1927094583.888028
+      "market_cap": 102210828419.4423,
+      "price": 709.7619323207579,
+      "volume": 1924183394.5925055
     },
     {
       "rank": 6,
       "name": "Solana",
       "symbol": "SOL",
-      "market_cap": 93484272238.42302,
-      "price": 194.90827995958065,
-      "volume": 2300019843.5662518
+      "market_cap": 93808881538.06409,
+      "price": 195.58506803031156,
+      "volume": 2304966173.955744
     },
     {
       "rank": 7,
       "name": "Dogecoin",
       "symbol": "DOGE",
-      "market_cap": 48065564799.30463,
-      "price": 0.32609009572643183,
-      "volume": 1425544724.4687898
+      "market_cap": 48130900290.59572,
+      "price": 0.3265333497836431,
+      "volume": 1428708025.6792808
     },
     {
       "rank": 8,
       "name": "USDC",
       "symbol": "USDC",
-      "market_cap": 43613115554.26602,
-      "price": 1.000104042752635,
-      "volume": 4146198430.9403996
+      "market_cap": 43604854707.12913,
+      "price": 0.9999146110527171,
+      "volume": 4147550614.53278
     },
     {
       "rank": 9,
       "name": "Cardano",
       "symbol": "ADA",
-      "market_cap": 31120687129.75801,
-      "price": 0.8858244133629756,
-      "volume": 489645864.8053621
+      "market_cap": 31172677928.017708,
+      "price": 0.8873042880899263,
+      "volume": 491356953.83996874
     },
     {
       "rank": 10,
       "name": "TRON",
       "symbol": "TRX",
-      "market_cap": 22434899404.56804,
-      "price": 0.26025697581780666,
-      "volume": 623598906.5081941
+      "market_cap": 22457415932.461304,
+      "price": 0.2605181797282742,
+      "volume": 623703982.0806564
     }
   ],
-  "best_bet": null,
-  "suggested_holding_time": null,
-  "projected_profit_per_100": null,
-  "timestamp": "2024-12-29 09:21:54 UTC"
+  "best_bet": {
+    "symbol": "DAI",
+    "name": "Dai",
+    "price": 0.9999406012548265,
+    "rsi": 0.0,
+    "volume": 129009112.592579,
+    "percent_change_24h": -0.01253602,
+    "buy": 50.02,
+    "sell": 49.98,
+    "coin_id": {
+      "id": 4943,
+      "icon_url": "https://s2.coinmarketcap.com/static/img/coins/64x64/4943.png"
+    }
+  },
+  "suggested_holding_time": 14,
+  "projected_profit_per_100": -0.18,
+  "timestamp": "2024-12-29 09:30:52 UTC"
 }
