@@ -3,10 +3,10 @@
     {
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 322.18322842590163,
+      "price": 319.5107658429447,
       "rsi": 0.0,
-      "volume": 644699242.8418666,
-      "percent_change_24h": -1.61421207,
+      "volume": 637143685.2473718,
+      "percent_change_24h": -2.69401372,
       "buy": 50.01,
       "sell": 49.99,
       "coin_id": {
@@ -20,90 +20,90 @@
       "rank": 1,
       "name": "Bitcoin",
       "symbol": "BTC",
-      "market_cap": 1892098631802.421,
-      "price": 95542.38390677594,
-      "volume": 56475196833.47647
+      "market_cap": 1885740711752.9375,
+      "price": 95221.23205105335,
+      "volume": 55667427357.68205
     },
     {
       "rank": 2,
       "name": "Ethereum",
       "symbol": "ETH",
-      "market_cap": 412491420262.7055,
-      "price": 3423.9415374015734,
-      "volume": 24835756811.663357
+      "market_cap": 410894493506.6197,
+      "price": 3410.686028113967,
+      "volume": 24598739276.51772
     },
     {
       "rank": 3,
       "name": "Tether USDt",
       "symbol": "USDT",
-      "market_cap": 137627765075.4982,
-      "price": 0.998712755839052,
-      "volume": 111496061498.0891
+      "market_cap": 137604306885.0382,
+      "price": 0.9985425286030838,
+      "volume": 110403867174.42374
     },
     {
       "rank": 4,
       "name": "XRP",
       "symbol": "XRP",
-      "market_cap": 122416614800.79912,
-      "price": 2.132313720300024,
-      "volume": 6149897823.066842
+      "market_cap": 121565631320.74629,
+      "price": 2.1174908651408773,
+      "volume": 6115978874.1256275
     },
     {
       "rank": 5,
       "name": "BNB",
       "symbol": "BNB",
-      "market_cap": 102505056736.59561,
-      "price": 711.8058358560144,
-      "volume": 2031406433.2371182
+      "market_cap": 102535335746.64717,
+      "price": 712.0161055170471,
+      "volume": 2058729475.2448492
     },
     {
       "rank": 6,
       "name": "Solana",
       "symbol": "SOL",
-      "market_cap": 94783541304.42642,
-      "price": 197.57894025475974,
-      "volume": 3539389679.1149516
+      "market_cap": 94691798563.70033,
+      "price": 197.38776493772195,
+      "volume": 3531533749.293841
     },
     {
       "rank": 7,
       "name": "Dogecoin",
       "symbol": "DOGE",
-      "market_cap": 48099826178.85059,
-      "price": 0.3262552911281772,
-      "volume": 2498434695.538505
+      "market_cap": 48043909296.64773,
+      "price": 0.3258753284779034,
+      "volume": 2497091093.0680504
     },
     {
       "rank": 8,
       "name": "USDC",
       "symbol": "USDC",
-      "market_cap": 43858577197.93482,
-      "price": 0.9999568606945102,
-      "volume": 7921493222.831458
+      "market_cap": 43882411063.75113,
+      "price": 0.9999846981321896,
+      "volume": 7836364529.53553
     },
     {
       "rank": 9,
       "name": "Cardano",
       "symbol": "ADA",
-      "market_cap": 30557596723.801945,
-      "price": 0.8696012216355713,
-      "volume": 885062195.0936894
+      "market_cap": 30472427719.80159,
+      "price": 0.8671775012561966,
+      "volume": 881778355.6079311
     },
     {
       "rank": 10,
       "name": "TRON",
       "symbol": "TRX",
-      "market_cap": 22143705915.721085,
-      "price": 0.25689635395822874,
-      "volume": 807159286.1222496
+      "market_cap": 22107082756.85996,
+      "price": 0.2564717684435985,
+      "volume": 798983965.2387601
     }
   ],
   "best_bet": {
     "symbol": "AAVE",
     "name": "Aave",
-    "price": 322.18322842590163,
+    "price": 319.5107658429447,
     "rsi": 0.0,
-    "volume": 644699242.8418666,
-    "percent_change_24h": -1.61421207,
+    "volume": 637143685.2473718,
+    "percent_change_24h": -2.69401372,
     "buy": 50.01,
     "sell": 49.99,
     "coin_id": {
@@ -111,7 +111,7 @@
       "icon_url": "https://s2.coinmarketcap.com/static/img/coins/64x64/7278.png"
     }
   },
-  "suggested_holding_time": 14,
-  "projected_profit_per_100": -20.37,
-  "timestamp": "2024-12-31 15:06:55 UTC"
+  "suggested_holding_time": 7,
+  "projected_profit_per_100": -17.4,
+  "timestamp": "2024-12-31 15:24:08 UTC"
 }
