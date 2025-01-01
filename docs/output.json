@@ -1,12 +1,40 @@
 {
   "buy_signals": [
     {
+      "symbol": "ADA",
+      "name": "Cardano",
+      "price": 0.8497043280403278,
+      "rsi": 0.0,
+      "volume": 622174574.0787948,
+      "percent_change_24h": -0.87135692,
+      "buy": 50.01,
+      "sell": 49.99,
+      "coin_id": {
+        "id": 2010,
+        "icon_url": "https://s2.coinmarketcap.com/static/img/coins/64x64/2010.png"
+      }
+    },
+    {
+      "symbol": "AVAX",
+      "name": "Avalanche",
+      "price": 35.43072732655424,
+      "rsi": 0.0,
+      "volume": 305140488.17688435,
+      "percent_change_24h": -1.24648245,
+      "buy": 50.01,
+      "sell": 49.99,
+      "coin_id": {
+        "id": 5805,
+        "icon_url": "https://s2.coinmarketcap.com/static/img/coins/64x64/5805.png"
+      }
+    },
+    {
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 19.96574168651424,
+      "price": 19.891776233778845,
       "rsi": 0.0,
-      "volume": 567527704.57807,
-      "percent_change_24h": -1.80260373,
+      "volume": 562011958.5458848,
+      "percent_change_24h": -3.51123622,
       "buy": 50.01,
       "sell": 49.99,
       "coin_id": {
@@ -15,12 +43,26 @@
       }
     },
     {
+      "symbol": "SHIB",
+      "name": "Shiba Inu",
+      "price": 2.1003887860712636e-05,
+      "rsi": 0.0,
+      "volume": 370984380.77708626,
+      "percent_change_24h": -0.22455976,
+      "buy": 50.01,
+      "sell": 49.99,
+      "coin_id": {
+        "id": 33894,
+        "icon_url": "https://s2.coinmarketcap.com/static/img/coins/64x64/33894.png"
+      }
+    },
+    {
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.26850167692888904,
+      "price": 0.2672622141960771,
       "rsi": 0.0,
-      "volume": 479020531.881307,
-      "percent_change_24h": -0.11406046,
+      "volume": 472020076.0193031,
+      "percent_change_24h": -2.77178581,
       "buy": 50.01,
       "sell": 49.99,
       "coin_id": {
@@ -29,12 +71,26 @@
       }
     },
     {
+      "symbol": "DOT",
+      "name": "Polkadot",
+      "price": 6.609532389503691,
+      "rsi": 0.0,
+      "volume": 185015891.09270427,
+      "percent_change_24h": -1.87193731,
+      "buy": 50.02,
+      "sell": 49.98,
+      "coin_id": {
+        "id": 6636,
+        "icon_url": "https://s2.coinmarketcap.com/static/img/coins/64x64/6636.png"
+      }
+    },
+    {
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 434.8006461432863,
+      "price": 433.4362350137272,
       "rsi": 0.0,
-      "volume": 245532814.79210865,
-      "percent_change_24h": -0.758943,
+      "volume": 244471613.70611334,
+      "percent_change_24h": -1.8629433,
       "buy": 50.01,
       "sell": 49.99,
       "coin_id": {
@@ -45,10 +101,10 @@
     {
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 13.212275141860216,
+      "price": 13.16256073093957,
       "rsi": 0.0,
-      "volume": 329571715.264544,
-      "percent_change_24h": -0.52599076,
+      "volume": 323664013.2667315,
+      "percent_change_24h": -1.85455656,
       "buy": 50.01,
       "sell": 49.99,
       "coin_id": {
@@ -59,10 +115,10 @@
     {
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 4.963915522339528,
+      "price": 4.935477601309165,
       "rsi": 0.0,
-      "volume": 238177748.78914738,
-      "percent_change_24h": -0.57837548,
+      "volume": 235028134.92119664,
+      "percent_change_24h": -2.52774414,
       "buy": 50.01,
       "sell": 49.99,
       "coin_id": {
@@ -73,10 +129,10 @@
     {
       "symbol": "DAI",
       "name": "Dai",
-      "price": 0.9998857634311802,
+      "price": 0.9998865778534104,
       "rsi": 0.0,
-      "volume": 118452473.9611211,
-      "percent_change_24h": -0.04244405,
+      "volume": 119063394.14673802,
+      "percent_change_24h": -0.028938,
       "buy": 50.03,
       "sell": 49.97,
       "coin_id": {
@@ -87,10 +143,10 @@
     {
       "symbol": "APT",
       "name": "Aptos",
-      "price": 8.67240458874379,
+      "price": 8.608452523462608,
       "rsi": 0.0,
-      "volume": 177220339.03403145,
-      "percent_change_24h": -0.68754323,
+      "volume": 174661420.67904013,
+      "percent_change_24h": -3.00640798,
       "buy": 50.02,
       "sell": 49.98,
       "coin_id": {
@@ -99,12 +155,40 @@
       }
     },
     {
+      "symbol": "ICP",
+      "name": "Internet Computer",
+      "price": 9.865381364214638,
+      "rsi": 0.0,
+      "volume": 126232692.20710082,
+      "percent_change_24h": -1.82872559,
+      "buy": 50.03,
+      "sell": 49.97,
+      "coin_id": {
+        "id": 8916,
+        "icon_url": "https://s2.coinmarketcap.com/static/img/coins/64x64/8916.png"
+      }
+    },
+    {
+      "symbol": "AAVE",
+      "name": "Aave",
+      "price": 311.2357094666955,
+      "rsi": 0.0,
+      "volume": 448953845.42927206,
+      "percent_change_24h": -1.32544274,
+      "buy": 50.01,
+      "sell": 49.99,
+      "coin_id": {
+        "id": 7278,
+        "icon_url": "https://s2.coinmarketcap.com/static/img/coins/64x64/7278.png"
+      }
+    },
+    {
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.4521006148939186,
+      "price": 0.45060727046409055,
       "rsi": 0.0,
-      "volume": 152211330.65398666,
-      "percent_change_24h": -1.1374324,
+      "volume": 150920045.62872964,
+      "percent_change_24h": -3.06978375,
       "buy": 50.02,
       "sell": 49.98,
       "coin_id": {
@@ -113,12 +197,54 @@
       }
     },
     {
+      "symbol": "ETC",
+      "name": "Ethereum Classic",
+      "price": 24.861957569600182,
+      "rsi": 0.0,
+      "volume": 150680218.12829703,
+      "percent_change_24h": -1.97876602,
+      "buy": 50.02,
+      "sell": 49.98,
+      "coin_id": {
+        "id": 1321,
+        "icon_url": "https://s2.coinmarketcap.com/static/img/coins/64x64/1321.png"
+      }
+    },
+    {
+      "symbol": "CRO",
+      "name": "Cronos",
+      "price": 0.1402368910016571,
+      "rsi": 0.0,
+      "volume": 29787607.49635386,
+      "percent_change_24h": -1.62680336,
+      "buy": 50.11,
+      "sell": 49.89,
+      "coin_id": {
+        "id": 3635,
+        "icon_url": "https://s2.coinmarketcap.com/static/img/coins/64x64/3635.png"
+      }
+    },
+    {
+      "symbol": "VET",
+      "name": "VeChain",
+      "price": 0.04294927872581386,
+      "rsi": 0.0,
+      "volume": 55187261.36790469,
+      "percent_change_24h": -1.93068484,
+      "buy": 50.06,
+      "sell": 49.94,
+      "coin_id": {
+        "id": 3077,
+        "icon_url": "https://s2.coinmarketcap.com/static/img/coins/64x64/3077.png"
+      }
+    },
+    {
       "symbol": "RENDER",
       "name": "Render",
-      "price": 6.748302888142442,
+      "price": 6.700028997560236,
       "rsi": 0.0,
-      "volume": 258464664.40629223,
-      "percent_change_24h": -0.13286974,
+      "volume": 256081293.02068067,
+      "percent_change_24h": -2.79736461,
       "buy": 50.01,
       "sell": 49.99,
       "coin_id": {
@@ -129,10 +255,10 @@
     {
       "symbol": "FET",
       "name": "Artificial Superintelligence Alliance",
-      "price": 1.2589582330091058,
+      "price": 1.2521460002177502,
       "rsi": 0.0,
-      "volume": 173418831.01954114,
-      "percent_change_24h": -0.87050236,
+      "volume": 170629790.1820307,
+      "percent_change_24h": -3.65716271,
       "buy": 50.02,
       "sell": 49.98,
       "coin_id": {
@@ -141,12 +267,26 @@
       }
     },
     {
+      "symbol": "FIL",
+      "name": "Filecoin",
+      "price": 4.913266584931664,
+      "rsi": 0.0,
+      "volume": 157986844.72620726,
+      "percent_change_24h": -0.46203531,
+      "buy": 50.02,
+      "sell": 49.98,
+      "coin_id": {
+        "id": 2280,
+        "icon_url": "https://s2.coinmarketcap.com/static/img/coins/64x64/2280.png"
+      }
+    },
+    {
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.7186634535505785,
+      "price": 0.7149614958788567,
       "rsi": 0.0,
-      "volume": 196170270.61512837,
-      "percent_change_24h": -0.53841612,
+      "volume": 194172485.71080428,
+      "percent_change_24h": -2.48826465,
       "buy": 50.02,
       "sell": 49.98,
       "coin_id": {
@@ -157,12 +297,12 @@
     {
       "symbol": "ATOM",
       "name": "Cosmos",
-      "price": 6.144088711298045,
+      "price": 6.116175490807489,
       "rsi": 0.0,
-      "volume": 135494217.02140182,
-      "percent_change_24h": -1.08961114,
-      "buy": 50.02,
-      "sell": 49.98,
+      "volume": 134662298.25254813,
+      "percent_change_24h": -3.28309458,
+      "buy": 50.03,
+      "sell": 49.97,
       "coin_id": {
         "id": 30019,
         "icon_url": "https://s2.coinmarketcap.com/static/img/coins/64x64/30019.png"
@@ -171,10 +311,10 @@
     {
       "symbol": "OP",
       "name": "Optimism",
-      "price": 1.7611953253437622,
+      "price": 1.748345207754779,
       "rsi": 0.0,
-      "volume": 206492984.56176406,
-      "percent_change_24h": -1.2856924,
+      "volume": 203157281.944137,
+      "percent_change_24h": -3.43949765,
       "buy": 50.02,
       "sell": 49.98,
       "coin_id": {
@@ -188,98 +328,98 @@
       "rank": 1,
       "name": "Bitcoin",
       "symbol": "BTC",
-      "market_cap": 1852363031719.9368,
-      "price": 93534.67447753357,
-      "volume": 39277510107.69726
+      "market_cap": 1846124187766.1858,
+      "price": 93219.5135897781,
+      "volume": 38890391470.9463
     },
     {
       "rank": 2,
       "name": "Ethereum",
       "symbol": "ETH",
-      "market_cap": 402396783952.85376,
-      "price": 3340.0996324582893,
-      "volume": 19250122726.710896
+      "market_cap": 400884295942.0627,
+      "price": 3327.545206452905,
+      "volume": 19068985011.243877
     },
     {
       "rank": 3,
       "name": "Tether USDt",
       "symbol": "USDT",
-      "market_cap": 137137531411.6365,
-      "price": 0.9977799269513357,
-      "volume": 83464035995.68678
+      "market_cap": 137170707566.17935,
+      "price": 0.99802130872856,
+      "volume": 82449387955.98616
     },
     {
       "rank": 4,
       "name": "XRP",
       "symbol": "XRP",
-      "market_cap": 122092584311.98088,
-      "price": 2.1266695954544956,
-      "volume": 4707884501.076162
+      "market_cap": 121653194150.24881,
+      "price": 2.119016078226048,
+      "volume": 4652623325.630214
     },
     {
       "rank": 5,
       "name": "BNB",
       "symbol": "BNB",
-      "market_cap": 101177997516.77065,
-      "price": 702.5907792700682,
-      "volume": 2318410405.892358
+      "market_cap": 101027169090.55482,
+      "price": 701.5434152108079,
+      "volume": 2311960630.268751
     },
     {
       "rank": 6,
       "name": "Solana",
       "symbol": "SOL",
-      "market_cap": 91809981658.5176,
-      "price": 190.1512568533361,
-      "volume": 3122707026.3250346
+      "market_cap": 91534504592.05238,
+      "price": 189.5807054876092,
+      "volume": 3090361977.107069
     },
     {
       "rank": 7,
       "name": "Dogecoin",
       "symbol": "DOGE",
-      "market_cap": 46630119781.49141,
-      "price": 0.3162658998162172,
-      "volume": 2047543973.8838325
+      "market_cap": 46420958015.7085,
+      "price": 0.31484667517241705,
+      "volume": 2017759784.1292212
     },
     {
       "rank": 8,
       "name": "USDC",
       "symbol": "USDC",
-      "market_cap": 43917585212.93232,
-      "price": 0.9999182117745359,
-      "volume": 6148611833.619719
+      "market_cap": 43922957118.00336,
+      "price": 1.0000664945666309,
+      "volume": 6058681565.155216
     },
     {
       "rank": 9,
       "name": "Cardano",
       "symbol": "ADA",
-      "market_cap": 29942871252.79109,
-      "price": 0.8521075023030834,
-      "volume": 633108464.278332
+      "market_cap": 29858424234.834755,
+      "price": 0.8497043280403278,
+      "volume": 622174574.0787948
     },
     {
       "rank": 10,
       "name": "TRON",
       "symbol": "TRX",
-      "market_cap": 21977710492.71769,
-      "price": 0.25496969152127025,
-      "volume": 500384865.37680405
+      "market_cap": 21956979099.80485,
+      "price": 0.2547292060226697,
+      "volume": 482503843.8635125
     }
   ],
   "best_bet": {
-    "symbol": "DAI",
-    "name": "Dai",
-    "price": 0.9998857634311802,
+    "symbol": "CRO",
+    "name": "Cronos",
+    "price": 0.1402368910016571,
     "rsi": 0.0,
-    "volume": 118452473.9611211,
-    "percent_change_24h": -0.04244405,
-    "buy": 50.03,
-    "sell": 49.97,
+    "volume": 29787607.49635386,
+    "percent_change_24h": -1.62680336,
+    "buy": 50.11,
+    "sell": 49.89,
     "coin_id": {
-      "id": 4943,
-      "icon_url": "https://s2.coinmarketcap.com/static/img/coins/64x64/4943.png"
+      "id": 3635,
+      "icon_url": "https://s2.coinmarketcap.com/static/img/coins/64x64/3635.png"
     }
   },
   "suggested_holding_time": 14,
-  "projected_profit_per_100": -0.59,
-  "timestamp": "2025-01-01 08:09:57 UTC"
+  "projected_profit_per_100": -20.52,
+  "timestamp": "2025-01-01 08:31:16 UTC"
 }
