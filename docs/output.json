@@ -3,10 +3,10 @@
     {
       "symbol": "DAI",
       "name": "Dai",
-      "price": 0.9997830530924318,
+      "price": 0.9999165289312228,
       "rsi": 0.0,
-      "volume": 120109193.05786811,
-      "percent_change_24h": -0.02641071,
+      "volume": 124261244.31418636,
+      "percent_change_24h": -0.00326188,
       "buy": 50.02,
       "sell": 49.98,
       "coin_id": {
@@ -20,90 +20,90 @@
       "rank": 1,
       "name": "Bitcoin",
       "symbol": "BTC",
-      "market_cap": 1872625355375.4614,
-      "price": 94556.69890882872,
-      "volume": 24497147379.741684
+      "market_cap": 1872761402582.0403,
+      "price": 94563.56850221158,
+      "volume": 24682771611.44112
     },
     {
       "rank": 2,
       "name": "Ethereum",
       "symbol": "ETH",
-      "market_cap": 404052895736.55884,
-      "price": 3353.8462094207716,
-      "volume": 14248775541.242714
+      "market_cap": 403992957074.6958,
+      "price": 3353.348687794251,
+      "volume": 14478539754.819948
     },
     {
       "rank": 3,
       "name": "Tether USDt",
       "symbol": "USDT",
-      "market_cap": 137160429447.15863,
-      "price": 0.9979465275892166,
-      "volume": 65712061456.813515
+      "market_cap": 137179323540.88397,
+      "price": 0.9980839965028176,
+      "volume": 66363649829.29817
     },
     {
       "rank": 4,
       "name": "XRP",
       "symbol": "XRP",
-      "market_cap": 133177314115.00012,
-      "price": 2.319748953867225,
-      "volume": 6500089108.050403
+      "market_cap": 132400866292.33014,
+      "price": 2.3062243980046864,
+      "volume": 6598243462.126125
     },
     {
       "rank": 5,
       "name": "BNB",
       "symbol": "BNB",
-      "market_cap": 101699362081.48904,
-      "price": 706.2113525990335,
-      "volume": 1600188900.6664484
+      "market_cap": 101791682791.2671,
+      "price": 706.8524375772562,
+      "volume": 1589540253.6171212
     },
     {
       "rank": 6,
       "name": "Solana",
       "symbol": "SOL",
-      "market_cap": 93233399247.57317,
-      "price": 193.10153076409517,
-      "volume": 2369512085.150233
+      "market_cap": 93291388501.81339,
+      "price": 193.22163593940815,
+      "volume": 2403723156.4134545
     },
     {
       "rank": 7,
       "name": "Dogecoin",
       "symbol": "DOGE",
-      "market_cap": 47855857948.95138,
-      "price": 0.32456444594559153,
-      "volume": 1459017851.8981652
+      "market_cap": 47888770193.95877,
+      "price": 0.3247876609295762,
+      "volume": 1471499457.3148475
     },
     {
       "rank": 8,
       "name": "USDC",
       "symbol": "USDC",
-      "market_cap": 43778456896.28456,
-      "price": 1.000018946088829,
-      "volume": 4671687766.867631
+      "market_cap": 43779498409.72621,
+      "price": 1.0000427370866871,
+      "volume": 4880063022.779605
     },
     {
       "rank": 9,
       "name": "Cardano",
       "symbol": "ADA",
-      "market_cap": 32208659480.143078,
-      "price": 0.9165867945812636,
-      "volume": 759200867.8039204
+      "market_cap": 32300150657.708855,
+      "price": 0.9191904299554455,
+      "volume": 773784774.2069498
     },
     {
       "rank": 10,
       "name": "TRON",
       "symbol": "TRX",
-      "market_cap": 22005338125.33923,
-      "price": 0.2552920078822524,
-      "volume": 451520593.04821926
+      "market_cap": 22005519322.253998,
+      "price": 0.2552941100141956,
+      "volume": 454092119.1442441
     }
   ],
   "best_bet": {
     "symbol": "DAI",
     "name": "Dai",
-    "price": 0.9997830530924318,
+    "price": 0.9999165289312228,
     "rsi": 0.0,
-    "volume": 120109193.05786811,
-    "percent_change_24h": -0.02641071,
+    "volume": 124261244.31418636,
+    "percent_change_24h": -0.00326188,
     "buy": 50.02,
     "sell": 49.98,
     "coin_id": {
@@ -112,6 +112,6 @@
     }
   },
   "suggested_holding_time": 14,
-  "projected_profit_per_100": -0.37,
-  "timestamp": "2025-01-01 19:50:52 UTC"
+  "projected_profit_per_100": -0.05,
+  "timestamp": "2025-01-01 20:07:42 UTC"
 }
