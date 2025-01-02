@@ -1,117 +1,89 @@
 {
-  "buy_signals": [
-    {
-      "symbol": "CRO",
-      "name": "Cronos",
-      "price": 0.14993907360751343,
-      "rsi": 0.0,
-      "volume": 33958447.46020426,
-      "percent_change_24h": -0.12698571,
-      "buy": 50.09,
-      "sell": 49.91,
-      "coin_id": {
-        "id": 3635,
-        "icon_url": "https://s2.coinmarketcap.com/static/img/coins/64x64/3635.png"
-      }
-    }
-  ],
+  "buy_signals": [],
   "top_10_cryptos": [
     {
       "rank": 1,
       "name": "Bitcoin",
       "symbol": "BTC",
-      "market_cap": 1918678232738.727,
-      "price": 96879.21053371912,
-      "volume": 46068456080.322784
+      "market_cap": 1916906389622.1238,
+      "price": 96789.64279151951,
+      "volume": 46045416214.55436
     },
     {
       "rank": 2,
       "name": "Ethereum",
       "symbol": "ETH",
-      "market_cap": 415614988832.51764,
-      "price": 3449.796825567974,
-      "volume": 22242408066.377308
+      "market_cap": 415112014915.7923,
+      "price": 3445.621909196125,
+      "volume": 22491651340.549088
     },
     {
       "rank": 3,
       "name": "XRP",
       "symbol": "XRP",
-      "market_cap": 137981285443.27286,
-      "price": 2.4034269251285005,
-      "volume": 8372444575.027093
+      "market_cap": 138031899488.39343,
+      "price": 2.404308545838451,
+      "volume": 8377753535.951648
     },
     {
       "rank": 4,
       "name": "Tether USDt",
       "symbol": "USDT",
-      "market_cap": 137297608333.81287,
-      "price": 0.9990172945602666,
-      "volume": 105335900843.48265
+      "market_cap": 137304811442.41963,
+      "price": 0.9990697064715889,
+      "volume": 105329753486.07338
     },
     {
       "rank": 5,
       "name": "BNB",
       "symbol": "BNB",
-      "market_cap": 101641027743.89594,
-      "price": 705.8066329954204,
-      "volume": 1880603519.848226
+      "market_cap": 101601117157.9347,
+      "price": 705.5294929136385,
+      "volume": 1882367516.0809784
     },
     {
       "rank": 6,
       "name": "Solana",
       "symbol": "SOL",
-      "market_cap": 100504061346.66457,
-      "price": 208.113528454097,
-      "volume": 4219453870.8465443
+      "market_cap": 100394959273.23555,
+      "price": 207.8880816636205,
+      "volume": 4226280458.917974
     },
     {
       "rank": 7,
       "name": "Dogecoin",
       "symbol": "DOGE",
-      "market_cap": 49991820031.90531,
-      "price": 0.33901553893155906,
-      "volume": 3207371556.057152
+      "market_cap": 49937001545.03154,
+      "price": 0.33864239088595993,
+      "volume": 3208901405.540057
     },
     {
       "rank": 8,
       "name": "USDC",
       "symbol": "USDC",
-      "market_cap": 44410457281.843834,
-      "price": 1.0000384273171874,
-      "volume": 7037727938.589939
+      "market_cap": 44409275390.101654,
+      "price": 1.000062524272176,
+      "volume": 7261036373.54897
     },
     {
       "rank": 9,
       "name": "Cardano",
       "symbol": "ADA",
-      "market_cap": 33842051257.780914,
-      "price": 0.9630694907854772,
-      "volume": 1204612926.0639281
+      "market_cap": 33805412428.549587,
+      "price": 0.9620268312155236,
+      "volume": 1204677225.6002467
     },
     {
       "rank": 10,
       "name": "TRON",
       "symbol": "TRX",
-      "market_cap": 22860183543.20527,
-      "price": 0.26521401154363283,
-      "volume": 928505487.6991848
+      "market_cap": 22853351011.43495,
+      "price": 0.26513474345042704,
+      "volume": 929336248.3799132
     }
   ],
-  "best_bet": {
-    "symbol": "CRO",
-    "name": "Cronos",
-    "price": 0.14993907360751343,
-    "rsi": 0.0,
-    "volume": 33958447.46020426,
-    "percent_change_24h": -0.12698571,
-    "buy": 50.09,
-    "sell": 49.91,
-    "coin_id": {
-      "id": 3635,
-      "icon_url": "https://s2.coinmarketcap.com/static/img/coins/64x64/3635.png"
-    }
-  },
-  "suggested_holding_time": 14,
-  "projected_profit_per_100": -1.76,
-  "timestamp": "2025-01-02 23:40:51 UTC"
+  "best_bet": null,
+  "suggested_holding_time": null,
+  "projected_profit_per_100": null,
+  "timestamp": "2025-01-02 23:50:47 UTC"
 }
