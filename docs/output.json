@@ -5,85 +5,85 @@
       "rank": 1,
       "name": "Bitcoin",
       "symbol": "BTC",
-      "market_cap": 1888798197620.4102,
-      "price": 95372.34141999848,
-      "volume": 29673206384.654556
+      "market_cap": 1888202583210.538,
+      "price": 95342.26666615524,
+      "volume": 29682582487.381268
     },
     {
       "rank": 2,
       "name": "Ethereum",
       "symbol": "ETH",
-      "market_cap": 409943628092.66016,
-      "price": 3402.721905743811,
-      "volume": 17027975089.47477
+      "market_cap": 409772111256.25323,
+      "price": 3401.2982365940766,
+      "volume": 17037142796.844362
     },
     {
       "rank": 3,
       "name": "Tether USDt",
       "symbol": "USDT",
-      "market_cap": 137182611236.42332,
-      "price": 0.9981805422634817,
-      "volume": 83255835422.73325
+      "market_cap": 137196997407.01865,
+      "price": 0.9982852202211071,
+      "volume": 83324616388.48
     },
     {
       "rank": 4,
       "name": "XRP",
       "symbol": "XRP",
-      "market_cap": 135098811706.77058,
-      "price": 2.353218558341444,
-      "volume": 10494688033.7461
+      "market_cap": 134988175034.94856,
+      "price": 2.3512914335497785,
+      "volume": 10500191299.20786
     },
     {
       "rank": 5,
       "name": "BNB",
       "symbol": "BNB",
-      "market_cap": 101293397855.06116,
-      "price": 703.392413865812,
-      "volume": 1688900540.0530512
+      "market_cap": 101296217311.34384,
+      "price": 703.4119924780657,
+      "volume": 1690391756.2524831
     },
     {
       "rank": 6,
       "name": "Solana",
       "symbol": "SOL",
-      "market_cap": 98939129067.30457,
-      "price": 204.91999699398846,
-      "volume": 3391930040.3787823
+      "market_cap": 99070987041.89801,
+      "price": 205.19309759647044,
+      "volume": 3405418747.0088196
     },
     {
       "rank": 7,
       "name": "Dogecoin",
       "symbol": "DOGE",
-      "market_cap": 48685419869.7068,
-      "price": 0.3301769570672211,
-      "volume": 2493193275.4788585
+      "market_cap": 48715719561.6819,
+      "price": 0.330382444872876,
+      "volume": 2496606247.2849402
     },
     {
       "rank": 8,
       "name": "USDC",
       "symbol": "USDC",
-      "market_cap": 43721230913.736374,
-      "price": 1.0000119708918727,
-      "volume": 6312833947.98485
+      "market_cap": 43725437049.618614,
+      "price": 1.0001081755536705,
+      "volume": 6317521688.606425
     },
     {
       "rank": 9,
       "name": "Cardano",
       "symbol": "ADA",
-      "market_cap": 32573235331.82454,
-      "price": 0.9269618122525349,
-      "volume": 1255774477.431331
+      "market_cap": 32574560321.887245,
+      "price": 0.9269995185220298,
+      "volume": 1258000306.3924763
     },
     {
       "rank": 10,
       "name": "TRON",
       "symbol": "TRX",
-      "market_cap": 22213455797.729355,
-      "price": 0.2577047886305686,
-      "volume": 549260625.8797163
+      "market_cap": 22217017932.244633,
+      "price": 0.2577461139934789,
+      "volume": 549497008.309698
     }
   ],
   "best_bet": null,
   "suggested_holding_time": null,
   "projected_profit_per_100": null,
-  "timestamp": "2025-01-02 06:46:49 UTC"
+  "timestamp": "2025-01-02 06:52:27 UTC"
 }
