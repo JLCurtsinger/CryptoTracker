@@ -1,117 +1,89 @@
 {
-  "buy_signals": [
-    {
-      "symbol": "DAI",
-      "name": "Dai",
-      "price": 0.9996141535683962,
-      "rsi": 0.0,
-      "volume": 163357090.24057984,
-      "percent_change_24h": -0.01346955,
-      "buy": 50.02,
-      "sell": 49.98,
-      "coin_id": {
-        "id": 4943,
-        "icon_url": "https://s2.coinmarketcap.com/static/img/coins/64x64/4943.png"
-      }
-    }
-  ],
+  "buy_signals": [],
   "top_10_cryptos": [
     {
       "rank": 1,
       "name": "Bitcoin",
       "symbol": "BTC",
-      "market_cap": 1908835692167.455,
-      "price": 96382.69172149635,
-      "volume": 43356454015.29927
+      "market_cap": 1914904038345.3945,
+      "price": 96689.10025174734,
+      "volume": 43979052025.73377
     },
     {
       "rank": 2,
       "name": "Ethereum",
       "symbol": "ETH",
-      "market_cap": 413484714044.59326,
-      "price": 3432.114558569826,
-      "volume": 22193910960.183548
+      "market_cap": 415641539121.8861,
+      "price": 3450.0172052617827,
+      "volume": 22380004612.6857
     },
     {
       "rank": 3,
-      "name": "XRP",
-      "symbol": "XRP",
-      "market_cap": 136597432426.44383,
-      "price": 2.379322282311308,
-      "volume": 10070998991.30294
+      "name": "Tether USDt",
+      "symbol": "USDT",
+      "market_cap": 137275602066.94215,
+      "price": 0.9988571705678727,
+      "volume": 107017028477.34401
     },
     {
       "rank": 4,
-      "name": "Tether USDt",
-      "symbol": "USDT",
-      "market_cap": 137317076530.55547,
-      "price": 0.9991589508168889,
-      "volume": 106125551038.014
+      "name": "XRP",
+      "symbol": "XRP",
+      "market_cap": 137223184493.46709,
+      "price": 2.3902219442582666,
+      "volume": 10050969948.676186
     },
     {
       "rank": 5,
       "name": "BNB",
       "symbol": "BNB",
-      "market_cap": 101099898219.52042,
-      "price": 702.0489219845106,
-      "volume": 1874231008.7988636
+      "market_cap": 101331786114.44835,
+      "price": 703.659177281721,
+      "volume": 1883053974.6601098
     },
     {
       "rank": 6,
       "name": "Solana",
       "symbol": "SOL",
-      "market_cap": 98934303614.30962,
-      "price": 204.91162875084714,
-      "volume": 4300018269.698101
+      "market_cap": 99049898639.72633,
+      "price": 205.15104788120235,
+      "volume": 4334559079.271128
     },
     {
       "rank": 7,
       "name": "Dogecoin",
       "symbol": "DOGE",
-      "market_cap": 49486786139.3255,
-      "price": 0.3355973145381957,
-      "volume": 3402240397.8192587
+      "market_cap": 49673021354.341484,
+      "price": 0.33686027871323515,
+      "volume": 3412385786.732879
     },
     {
       "rank": 8,
       "name": "USDC",
       "symbol": "USDC",
-      "market_cap": 43897205717.01035,
-      "price": 0.9999571062689647,
-      "volume": 7422271558.220374
+      "market_cap": 43896376096.915825,
+      "price": 0.9999382079246288,
+      "volume": 7478247742.263891
     },
     {
       "rank": 9,
       "name": "Cardano",
       "symbol": "ADA",
-      "market_cap": 33303953442.95307,
-      "price": 0.947756424075318,
-      "volume": 1524662880.4458027
+      "market_cap": 33458955411.144714,
+      "price": 0.9521674352590077,
+      "volume": 1522571780.5238225
     },
     {
       "rank": 10,
       "name": "TRON",
       "symbol": "TRX",
-      "market_cap": 22592544016.093014,
-      "price": 0.2621087593995818,
-      "volume": 830975807.4782047
+      "market_cap": 22614635435.07826,
+      "price": 0.26236505432676993,
+      "volume": 840363343.5569074
     }
   ],
-  "best_bet": {
-    "symbol": "DAI",
-    "name": "Dai",
-    "price": 0.9996141535683962,
-    "rsi": 0.0,
-    "volume": 163357090.24057984,
-    "percent_change_24h": -0.01346955,
-    "buy": 50.02,
-    "sell": 49.98,
-    "coin_id": {
-      "id": 4943,
-      "icon_url": "https://s2.coinmarketcap.com/static/img/coins/64x64/4943.png"
-    }
-  },
-  "suggested_holding_time": 14,
-  "projected_profit_per_100": -0.19,
-  "timestamp": "2025-01-02 17:51:03 UTC"
+  "best_bet": null,
+  "suggested_holding_time": null,
+  "projected_profit_per_100": null,
+  "timestamp": "2025-01-02 18:10:17 UTC"
 }
