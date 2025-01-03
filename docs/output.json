@@ -1,117 +1,89 @@
 {
-  "buy_signals": [
-    {
-      "symbol": "AAVE",
-      "name": "Aave",
-      "price": 333.18408520388203,
-      "rsi": 0.0,
-      "volume": 508136823.6844353,
-      "percent_change_24h": -0.25262022,
-      "buy": 50.01,
-      "sell": 49.99,
-      "coin_id": {
-        "id": 7278,
-        "icon_url": "https://s2.coinmarketcap.com/static/img/coins/64x64/7278.png"
-      }
-    }
-  ],
+  "buy_signals": [],
   "top_10_cryptos": [
     {
       "rank": 1,
       "name": "Bitcoin",
       "symbol": "BTC",
-      "market_cap": 1912268657567.9133,
-      "price": 96554.23318802145,
-      "volume": 38985350526.925575
+      "market_cap": 1910593289415.955,
+      "price": 96469.64053071894,
+      "volume": 38845250705.952995
     },
     {
       "rank": 2,
       "name": "Ethereum",
       "symbol": "ETH",
-      "market_cap": 419747212177.6583,
-      "price": 3484.086364355624,
-      "volume": 19636861803.95644
+      "market_cap": 419156161763.7587,
+      "price": 3479.180386119269,
+      "volume": 19458813057.10745
     },
     {
       "rank": 3,
       "name": "XRP",
       "symbol": "XRP",
-      "market_cap": 138467681477.97565,
-      "price": 2.4118992141228004,
-      "volume": 6077840226.545769
+      "market_cap": 138273444587.78122,
+      "price": 2.4085158989851947,
+      "volume": 6053834370.778681
     },
     {
       "rank": 4,
       "name": "Tether USDt",
       "symbol": "USDT",
-      "market_cap": 137149001891.32172,
-      "price": 0.9992596722724959,
-      "volume": 93918549207.49298
+      "market_cap": 137139105722.21289,
+      "price": 0.9991875693584092,
+      "volume": 93844686611.78046
     },
     {
       "rank": 5,
       "name": "Solana",
       "symbol": "SOL",
-      "market_cap": 102928618827.27908,
-      "price": 213.13846200067,
-      "volume": 3738846307.655906
+      "market_cap": 102740959817.33461,
+      "price": 212.749868884238,
+      "volume": 3742941657.6183395
     },
     {
       "rank": 6,
       "name": "BNB",
       "symbol": "BNB",
-      "market_cap": 101517858523.28986,
-      "price": 704.9515709809798,
-      "volume": 1741381649.3182828
+      "market_cap": 101423238216.75926,
+      "price": 704.2945167965661,
+      "volume": 1738769820.6572883
     },
     {
       "rank": 7,
       "name": "Dogecoin",
       "symbol": "DOGE",
-      "market_cap": 53354190994.73596,
-      "price": 0.3617960893227565,
-      "volume": 3045671741.3340397
+      "market_cap": 53360941865.424545,
+      "price": 0.36184186714393823,
+      "volume": 3085545463.1566005
     },
     {
       "rank": 8,
       "name": "USDC",
       "symbol": "USDC",
-      "market_cap": 44643474790.14458,
-      "price": 1.0000045577410457,
-      "volume": 6871402504.67263
+      "market_cap": 44643223988.69084,
+      "price": 0.9999989398406022,
+      "volume": 6663813810.05158
     },
     {
       "rank": 9,
       "name": "Cardano",
       "symbol": "ADA",
-      "market_cap": 37735191716.48136,
-      "price": 1.0738596072165825,
-      "volume": 1970214458.5678134
+      "market_cap": 37703360752.59959,
+      "price": 1.0729537687984758,
+      "volume": 1974210274.5290008
     },
     {
       "rank": 10,
       "name": "TRON",
       "symbol": "TRX",
-      "market_cap": 22744076229.438175,
-      "price": 0.2638700089233564,
-      "volume": 940216496.2963934
+      "market_cap": 22772856828.883038,
+      "price": 0.2642039128795217,
+      "volume": 936049241.4024105
     }
   ],
-  "best_bet": {
-    "symbol": "AAVE",
-    "name": "Aave",
-    "price": 333.18408520388203,
-    "rsi": 0.0,
-    "volume": 508136823.6844353,
-    "percent_change_24h": -0.25262022,
-    "buy": 50.01,
-    "sell": 49.99,
-    "coin_id": {
-      "id": 7278,
-      "icon_url": "https://s2.coinmarketcap.com/static/img/coins/64x64/7278.png"
-    }
-  },
-  "suggested_holding_time": 14,
-  "projected_profit_per_100": -3.48,
-  "timestamp": "2025-01-03 13:50:47 UTC"
+  "best_bet": null,
+  "suggested_holding_time": null,
+  "projected_profit_per_100": null,
+  "timestamp": "2025-01-03 14:01:04 UTC"
 }
