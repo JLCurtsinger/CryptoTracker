@@ -1,117 +1,89 @@
 {
-  "buy_signals": [
-    {
-      "symbol": "DAI",
-      "name": "Dai",
-      "price": 0.9999123102432917,
-      "rsi": 0.0,
-      "volume": 102314088.45051484,
-      "percent_change_24h": -0.00759923,
-      "buy": 50.03,
-      "sell": 49.97,
-      "coin_id": {
-        "id": 4943,
-        "icon_url": "https://s2.coinmarketcap.com/static/img/coins/64x64/4943.png"
-      }
-    }
-  ],
+  "buy_signals": [],
   "top_10_cryptos": [
     {
       "rank": 1,
       "name": "Bitcoin",
       "symbol": "BTC",
-      "market_cap": 1940157360541.493,
-      "price": 97962.20604211633,
-      "volume": 36489917756.8446
+      "market_cap": 1937308548164.9026,
+      "price": 97818.36412976084,
+      "volume": 36383772710.72497
     },
     {
       "rank": 2,
       "name": "Ethereum",
       "symbol": "ETH",
-      "market_cap": 432927247962.3946,
-      "price": 3593.486454760234,
-      "volume": 20748383237.671196
+      "market_cap": 431662958482.9816,
+      "price": 3582.992296352443,
+      "volume": 20823115932.414013
     },
     {
       "rank": 3,
       "name": "XRP",
       "symbol": "XRP",
-      "market_cap": 141436518072.95538,
-      "price": 2.4636118923005568,
-      "volume": 5948202733.054064
+      "market_cap": 141104254828.2559,
+      "price": 2.457824365202401,
+      "volume": 5938449674.601858
     },
     {
       "rank": 4,
       "name": "Tether USDt",
       "symbol": "USDT",
-      "market_cap": 137155500032.27527,
-      "price": 0.9993070173505503,
-      "volume": 94924232602.41547
+      "market_cap": 137146639904.84026,
+      "price": 0.999242462976002,
+      "volume": 95001796141.38724
     },
     {
       "rank": 5,
       "name": "Solana",
       "symbol": "SOL",
-      "market_cap": 105566575279.32129,
-      "price": 218.60180771052458,
-      "volume": 3936991670.9227133
+      "market_cap": 105025836912.25912,
+      "price": 217.48207464894273,
+      "volume": 3937244844.277518
     },
     {
       "rank": 6,
       "name": "BNB",
       "symbol": "BNB",
-      "market_cap": 102709833670.57399,
-      "price": 713.2288492123405,
-      "volume": 1761878108.692951
+      "market_cap": 102572114273.83522,
+      "price": 712.2725099472487,
+      "volume": 1765958525.1604142
     },
     {
       "rank": 7,
       "name": "Dogecoin",
       "symbol": "DOGE",
-      "market_cap": 55236737450.94484,
-      "price": 0.3745574164201104,
-      "volume": 3714967588.557795
+      "market_cap": 54945739237.96654,
+      "price": 0.37258417281692296,
+      "volume": 3734947271.272301
     },
     {
       "rank": 8,
       "name": "USDC",
       "symbol": "USDC",
-      "market_cap": 44798402099.58529,
-      "price": 0.9999839266518404,
-      "volume": 6687672514.397429
+      "market_cap": 44797303700.54181,
+      "price": 0.9999594083356271,
+      "volume": 6693409411.433663
     },
     {
       "rank": 9,
       "name": "Cardano",
       "symbol": "ADA",
-      "market_cap": 38596737518.28787,
-      "price": 1.0983772840652455,
-      "volume": 2159800201.2387514
+      "market_cap": 38395739574.06168,
+      "price": 1.0926573297303162,
+      "volume": 2157875113.6316466
     },
     {
       "rank": 10,
       "name": "TRON",
       "symbol": "TRX",
-      "market_cap": 23172850777.8904,
-      "price": 0.2688467925111367,
-      "volume": 915061381.3514079
+      "market_cap": 23174568261.839973,
+      "price": 0.26886671841733867,
+      "volume": 916421937.7383953
     }
   ],
-  "best_bet": {
-    "symbol": "DAI",
-    "name": "Dai",
-    "price": 0.9999123102432917,
-    "rsi": 0.0,
-    "volume": 102314088.45051484,
-    "percent_change_24h": -0.00759923,
-    "buy": 50.03,
-    "sell": 49.97,
-    "coin_id": {
-      "id": 4943,
-      "icon_url": "https://s2.coinmarketcap.com/static/img/coins/64x64/4943.png"
-    }
-  },
-  "suggested_holding_time": 14,
-  "projected_profit_per_100": -0.11,
-  "timestamp": "2025-01-03 16:51:24 UTC"
+  "best_bet": null,
+  "suggested_holding_time": null,
+  "projected_profit_per_100": null,
+  "timestamp": "2025-01-03 17:02:49 UTC"
 }
